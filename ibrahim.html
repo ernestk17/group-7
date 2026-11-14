@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lubega Ibrahim - Group 7</title>
+  <title>Lubega Ibrahim &bull; Sportsman & Student Profile</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/ibrahim.css">
@@ -11,13 +11,13 @@
 <body data-student="ibrahim">
 
   <!-- ======================================================================
-       1. NAVIGATION BAR
+       1. CLUBHOUSE GREEN & GOLD TOPBAR
        ====================================================================== -->
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Group 7 &bull; Makerere</a>
-      <nav>
-        <a href="index.html">Bakhita</a>
+  <header class="clubhouse-topbar">
+    <div class="clubhouse-nav-inner">
+      <a href="index.html" class="clubhouse-title">LUBEGA IBRAHIM &bull; MAKERERE</a>
+      <nav class="clubhouse-links">
+        <a href="index.html">Grace</a>
         <a href="daniella.html">Daniella</a>
         <a href="ernest.html">Ernest</a>
         <a href="ntwari.html">Joseph</a>
@@ -28,92 +28,116 @@
   </header>
 
   <!-- ======================================================================
-       2. MAIN CONTENT
+       2. MAIN DOSSIER WRAPPER
        ====================================================================== -->
-  <main class="container">
+  <main class="ibrahim-dossier-wrap">
 
-    <!-- Section 1: About Ibrahim -->
-    <section class="card">
-      <div class="profile-header">
-        <div class="profile-icon">
-          <i class="fa-solid fa-user"></i>
+    <!-- Dossier Profile Card with Formal Table -->
+    <section class="dossier-header-card">
+      <div class="dossier-top-flex">
+        <div class="dossier-crest">
+          <i class="fa-solid fa-flag"></i>
         </div>
-        <div class="profile-info">
+        <div class="dossier-headline">
           <h1>Lubega Ibrahim</h1>
-          <p class="profile-subtitle">Undergraduate Student at Makerere University</p>
-          <ul class="info-list">
-            <li>DOB: 01 / 01 / 2005</li>
-            <li>Email: lubegaibra24@gmail.com</li>
-            <li>Institution: Makerere University</li>
-            <li>Role: Group 7 Member</li>
-          </ul>
+          <p class="status-note">Undergraduate Student &bull; Sportsman at Makerere University</p>
         </div>
       </div>
+
+      <!-- Formal Profile Details Table -->
+      <table class="dossier-table">
+        <tr>
+          <td class="col-head">Date of Birth</td>
+          <td class="col-val">01 / January / 2005</td>
+        </tr>
+        <tr>
+          <td class="col-head">Institutional Email</td>
+          <td class="col-val">lubegaibra24@gmail.com</td>
+        </tr>
+        <tr>
+          <td class="col-head">University Campus</td>
+          <td class="col-val">Makerere University, Kampala</td>
+        </tr>
+        <tr>
+          <td class="col-head">Project Team</td>
+          <td class="col-val">Group 7 Web Development Team</td>
+        </tr>
+      </table>
     </section>
 
-    <!-- Section 2: Hobbies & Interests -->
-    <section class="card">
-      <h2><i class="fa-solid fa-heart"></i> My Hobbies & Interests</h2>
-      <div class="hobbies-grid">
-        <div class="hobby-card">
-          <i class="fa-solid fa-golf-ball-tee"></i>
+    <!-- Dual-Sport & Academic Showcase -->
+    <section>
+      <h2 class="clubhouse-heading">
+        <i class="fa-solid fa-trophy"></i> Sporting Disciplines & Interests
+      </h2>
+
+      <div class="dual-sport-grid">
+        <div class="sport-showcase-box">
+          <div class="sport-icon-tag">
+            <i class="fa-solid fa-golf-ball-tee"></i>
+          </div>
           <h3>Playing Golf</h3>
-          <p>I enjoy playing golf because it teaches focus, patience, body alignment, and mental calmness.</p>
+          <p>Practicing precision, body alignment, and calm calculation on the fairway. Golf is a discipline of patience and mental composure.</p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-futbol"></i>
+
+        <div class="sport-showcase-box">
+          <div class="sport-icon-tag">
+            <i class="fa-solid fa-futbol"></i>
+          </div>
           <h3>Playing Football</h3>
-          <p>Playing football with coursemates keeps energy and fitness high and builds great team spirit.</p>
+          <p>Competing in fast-paced matches with coursemates on campus. Football develops stamina, endurance, and decisive team communication.</p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-graduation-cap"></i>
+
+        <div class="sport-showcase-box">
+          <div class="sport-icon-tag">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
           <h3>University Academics</h3>
-          <p>Engaging in lectures, discussions, and coursework projects at Makerere University.</p>
+          <p>Attending daily lectures, participating in tutorial discussions, and collaborating on semester group coursework at Makerere.</p>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: Student Blog / Campus Experience -->
-    <section class="card">
-      <h2><i class="fa-solid fa-pen-nib"></i> Student Blog</h2>
-      <div class="blog-box">
-        <h3>The Focus of Golf and the Energy of Football</h3>
-        <p>
-          Being a university student requires focus, patience, and consistency—qualities that golf reinforces every time I practice. On the course, there is no need to rush; each swing demands careful thought, balance, and composure.
-        </p>
-        <p>
-          Football provides an awesome contrast: fast-paced movement, social teamwork, and active competition. Enjoying both sports alongside my academic workload gives me a balanced routine that keeps me motivated throughout the semester.
-        </p>
-      </div>
+    <!-- Course Notes & Reflections -->
+    <section class="course-notes-card">
+      <h2 class="clubhouse-heading">
+        <i class="fa-solid fa-book-open"></i> Course Notes & Campus Reflections
+      </h2>
+      <h3>The Composure of Golf and the Energy of Football</h3>
+      <p>
+        Being a university student requires steady focus and mental clarity—qualities that golf teaches with every swing. On the golf course, there is no rushing; each shot demands patience, calculation, and composed nerves.
+      </p>
+      <p>
+        Football provides the perfect complement: fast-paced teamwork, physical stamina, and camaraderie with coursemates. Balancing both sports after classes helps me approach university challenges with a calm and determined mindset.
+      </p>
     </section>
 
-    <!-- Section 4: Interactive Like and Comment Form -->
-    <section class="card">
-      <h2><i class="fa-solid fa-comments"></i> Leave a Message for Ibrahim</h2>
-      
-      <!-- Like Button -->
-      <div class="interactive-row">
-        <span>Support Ibrahim's page:</span>
-        <button id="like-btn" class="like-btn">
-          <i class="fa-solid fa-thumbs-up"></i> Like (<span id="like-count">0</span>)
+    <!-- Clubhouse Register & Endorsement -->
+    <section class="register-box">
+      <h2 class="clubhouse-heading">
+        <i class="fa-solid fa-pen-fancy"></i> Clubhouse Register
+      </h2>
+
+      <div class="register-endorse-bar">
+        <span>Commend Ibrahim's academic and sporting journey:</span>
+        <button id="like-btn" class="btn-endorse">
+          <i class="fa-solid fa-thumbs-up"></i> Endorse (<span id="like-count">0</span>)
         </button>
       </div>
 
-      <!-- Comment Form -->
-      <form id="comment-form" class="comment-form">
-        <input type="text" id="comment-author" placeholder="Your Name" required>
-        <textarea id="comment-message" placeholder="Write a message or feedback here..." required></textarea>
-        <button type="submit">Post Comment</button>
+      <form id="comment-form" class="register-form">
+        <input type="text" id="comment-author" placeholder="Your Name or Designation" required>
+        <textarea id="comment-message" placeholder="Sign an entry or message in the register..." required></textarea>
+        <button type="submit">Sign Register</button>
       </form>
 
-      <!-- Message List -->
       <div id="comments-list" class="comments-list"></div>
     </section>
 
-    <!-- Footer Navigation (Next & Previous) -->
-    <div class="footer-nav">
-      <a href="ntwari.html">&larr; Previous: Joseph</a>
-      <a href="matthew.html">Next: Matthew &rarr;</a>
+    <!-- Pager Navigation -->
+    <div class="clubhouse-pager">
+      <a href="ntwari.html" class="clubhouse-btn">&larr; Previous: Joseph</a>
+      <a href="matthew.html" class="clubhouse-btn">Next: Matthew &rarr;</a>
     </div>
 
     <footer>
@@ -122,7 +146,6 @@
 
   </main>
 
-  <!-- Interactive JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nantume Bakhita Grace - Group 7</title>
+  <title>Nantume Bakhita Grace &bull; Software Engineering Student</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/bakhita.css">
@@ -11,13 +11,13 @@
 <body data-student="bakhita">
 
   <!-- ======================================================================
-       1. NAVIGATION BAR
+       1. MINIMALIST TOPBAR
        ====================================================================== -->
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Group 7 &bull; Makerere</a>
-      <nav>
-        <a href="index.html" class="active">Bakhita</a>
+  <header class="grace-navbar">
+    <div class="grace-nav-inner">
+      <a href="index.html" class="grace-brand">GRACE<span>.DEV</span> // Makerere</a>
+      <nav class="grace-nav-links">
+        <a href="index.html" class="active">Grace</a>
         <a href="daniella.html">Daniella</a>
         <a href="ernest.html">Ernest</a>
         <a href="ntwari.html">Joseph</a>
@@ -28,106 +28,160 @@
   </header>
 
   <!-- ======================================================================
-       2. MAIN CONTENT
+       2. ASYMMETRICAL 2-COLUMN PORTFOLIO LAYOUT
        ====================================================================== -->
-  <main class="container">
+  <div class="grace-layout">
 
-    <!-- Section 1: About Bakhita -->
-    <section class="card">
-      <div class="profile-header">
-        <div class="profile-icon">
-          <i class="fa-solid fa-user"></i>
+    <!-- Left Column: Sticky Profile Card & Quick Info -->
+    <aside class="grace-sidebar">
+      <div class="grace-sidebar-card">
+        <div class="grace-avatar-frame">
+          <i class="fa-solid fa-laptop-code"></i>
         </div>
-        <div class="profile-info">
-          <h1>Nantume Bakhita Grace</h1>
-          <p class="profile-subtitle">Student at Makerere University &bull; Aspiring Software Engineer</p>
-          <ul class="info-list">
-            <li>Age: 21 Years Old</li>
-            <li>Institution: Makerere University</li>
-            <li>Career Goal: Software Engineering</li>
-            <li>Role: Group 7 Member</li>
-          </ul>
+        <h1>Nantume Bakhita Grace</h1>
+        <div class="grace-title-tag">Aspiring Software Engineer</div>
+
+        <table class="grace-meta-table">
+          <tr>
+            <td class="label">Age</td>
+            <td class="value">21 Years Old</td>
+          </tr>
+          <tr>
+            <td class="label">Campus</td>
+            <td class="value">Makerere University</td>
+          </tr>
+          <tr>
+            <td class="label">Focus</td>
+            <td class="value">Software Engineering</td>
+          </tr>
+          <tr>
+            <td class="label">Project</td>
+            <td class="value">Group 7</td>
+          </tr>
+        </table>
+
+        <!-- Interactive Like Panel -->
+        <div class="grace-like-panel">
+          <p>Support Grace's Portfolio</p>
+          <button id="like-btn" class="grace-like-btn">
+            <i class="fa-solid fa-heart"></i> Like (<span id="like-count">0</span>)
+          </button>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- Section 2: Hobbies & Interests -->
-    <section class="card">
-      <h2><i class="fa-solid fa-heart"></i> My Hobbies & Interests</h2>
-      <div class="hobbies-grid">
-        <div class="hobby-card">
-          <i class="fa-solid fa-book-open"></i>
-          <h3>Reading Novels</h3>
-          <p>I enjoy reading engaging novels and exploring good books whenever I have quiet free time.</p>
-        </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-film"></i>
-          <h3>Watching Movies</h3>
-          <p>Watching films on weekends is one of my favorite ways to relax after busy study days.</p>
-        </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-tv"></i>
-          <h3>Watching Series</h3>
-          <p>I follow drama and interesting series episodes during study breaks and in the evenings.</p>
-        </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-bed"></i>
-          <h3>Rest & Sleeping</h3>
-          <p>Getting peaceful, restful sleep helps me recharge and stay focused for upcoming lectures.</p>
-        </div>
-      </div>
-    </section>
+    <!-- Right Column: Main Content Stream -->
+    <main class="grace-main">
 
-    <!-- Section 3: Student Blog / Campus Experience -->
-    <section class="card">
-      <h2><i class="fa-solid fa-pen-nib"></i> Student Blog</h2>
-      <div class="blog-box">
-        <h3>Balancing Books, Code, and Free Time</h3>
-        <p>
-          Being a 21-year-old student at Makerere University means my schedule is filled with lectures, coursework assignments, and practicing programming fundamentals. My main goal is to build a career in software engineering, so I dedicate time every week to understanding development concepts.
+      <!-- Panel 1: Welcome & Overview -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-user"></i> About Me
+        </h2>
+        <p class="grace-hero-intro">
+          Hello! I am <strong>Nantume Bakhita Grace</strong>, a 21-year-old student at Makerere University. I am deeply interested in software engineering, system logic, and understanding how technology can solve everyday challenges. When I am not writing code or studying, I enjoy simple, grounding habits that keep life balanced.
         </p>
-        <p>
-          Whenever lectures wrap up, my favorite way to recharge is simply sitting down with a great novel, catching up on an episode of a series, or resting. Keeping a natural balance helps me stay refreshed and ready for university group work.
-        </p>
+      </section>
+
+      <!-- Panel 2: Hobbies & Downtime (Horizontal Modern Rows) -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-shapes"></i> Free Time & Interests
+        </h2>
+        <div class="grace-hobbies-list">
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Reading Novels</h3>
+              <p>Exploring captivating fiction and thought-provoking literature during quiet moments.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Watching Movies</h3>
+              <p>Relaxing with compelling films on weekends when academic coursework winds down.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-tv"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Watching Series</h3>
+              <p>Following engaging episodic dramas and exciting storylines in the evenings.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Rest & Sleep</h3>
+              <p>Prioritizing peaceful, restorative sleep to keep my mind sharp for morning lectures.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Panel 3: Journal / Campus Reflections -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-newspaper"></i> Campus Reflections
+        </h2>
+        <article class="grace-article">
+          <div class="grace-article-meta">
+            <span class="category">Makerere University</span>
+            <span>&bull;</span>
+            <span>Student Life</span>
+          </div>
+          <h3>Balancing Code, Lecture Halls, and Solitude</h3>
+          <p>
+            Being a software engineering student at Makerere requires consistent practice, discipline, and attention to detail. Every week brings new algorithms, project discussions, and deadlines that challenge our problem-solving skills.
+          </p>
+          <p>
+            Finding healthy downtime is what makes the journey sustainable. Whether it is reading a few chapters of a novel, catching up on an episode of my favorite series, or taking a refreshing nap, keeping my routine balanced helps me stay energized and ready to contribute to my group.
+          </p>
+        </article>
+      </section>
+
+      <!-- Panel 4: Interactive Comment Box -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-comment-dots"></i> Leave a Friendly Note
+        </h2>
+        <form id="comment-form" class="grace-comment-form">
+          <input type="text" id="comment-author" placeholder="Your Name" required>
+          <textarea id="comment-message" placeholder="Leave a message or feedback for Grace..." required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+
+        <div id="comments-list" class="comments-list"></div>
+      </section>
+
+      <!-- Navigation to other group members -->
+      <div class="grace-footer-nav">
+        <a href="matthew.html" class="grace-footer-btn">&larr; Previous: Matthew</a>
+        <a href="daniella.html" class="grace-footer-btn">Next: Daniella &rarr;</a>
       </div>
-    </section>
 
-    <!-- Section 4: Interactive Like and Comment Form -->
-    <section class="card">
-      <h2><i class="fa-solid fa-comments"></i> Leave a Message for Bakhita</h2>
-      
-      <!-- Like Button -->
-      <div class="interactive-row">
-        <span>Support Bakhita's page:</span>
-        <button id="like-btn" class="like-btn">
-          <i class="fa-solid fa-thumbs-up"></i> Like (<span id="like-count">0</span>)
-        </button>
-      </div>
+      <footer>
+        <p>&copy; 2026 Group 7 &bull; Makerere University</p>
+      </footer>
 
-      <!-- Comment Form -->
-      <form id="comment-form" class="comment-form">
-        <input type="text" id="comment-author" placeholder="Your Name" required>
-        <textarea id="comment-message" placeholder="Write a message or feedback here..." required></textarea>
-        <button type="submit">Post Comment</button>
-      </form>
+    </main>
 
-      <!-- Message List -->
-      <div id="comments-list" class="comments-list"></div>
-    </section>
+  </div>
 
-    <!-- Footer Navigation (Next & Previous) -->
-    <div class="footer-nav">
-      <a href="matthew.html">&larr; Previous: Matthew</a>
-      <a href="daniella.html">Next: Daniella &rarr;</a>
-    </div>
-
-    <footer>
-      <p>&copy; 2026 Group 7 &bull; Makerere University</p>
-    </footer>
-
-  </main>
-
-  <!-- Interactive JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

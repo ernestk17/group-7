@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kagoda Daniella Evelyn - Group 7</title>
+  <title>Kagoda Daniella Evelyn &bull; Purple Space</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/daniella.css">
@@ -11,13 +11,13 @@
 <body data-student="daniella">
 
   <!-- ======================================================================
-       1. NAVIGATION BAR
+       1. ROUNDED TOPBAR
        ====================================================================== -->
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Group 7 &bull; Makerere</a>
-      <nav>
-        <a href="index.html">Bakhita</a>
+  <header class="daniella-header">
+    <div class="daniella-nav-box">
+      <a href="index.html" class="daniella-logo">DANIELLA &bull; MAKERERE</a>
+      <nav class="daniella-pills">
+        <a href="index.html">Grace</a>
         <a href="daniella.html" class="active">Daniella</a>
         <a href="ernest.html">Ernest</a>
         <a href="ntwari.html">Joseph</a>
@@ -28,92 +28,97 @@
   </header>
 
   <!-- ======================================================================
-       2. MAIN CONTENT
+       2. CENTERED STUDIO CONTAINER
        ====================================================================== -->
-  <main class="container">
+  <main class="daniella-container">
 
-    <!-- Section 1: About Daniella -->
-    <section class="card">
-      <div class="profile-header">
-        <div class="profile-icon">
-          <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="profile-info">
-          <h1>Kagoda Daniella Evelyn</h1>
-          <p class="profile-subtitle">Student at Makerere University &bull; Registration: 25/U/03765</p>
-          <ul class="info-list">
-            <li>Reg No: 25/U/03765</li>
-            <li>DOB: 05 / Feb / 2006</li>
-            <li>Email: kayzdaniella@gmail.com</li>
-            <li>Favorite Color: Purple</li>
-          </ul>
-        </div>
+    <!-- Hero Card: Centered Student Banner -->
+    <section class="daniella-hero-card">
+      <div class="daniella-avatar-badge">
+        <i class="fa-solid fa-palette"></i>
       </div>
+      <h1>Kagoda Daniella Evelyn</h1>
+      <p class="tagline">Undergraduate Student at Makerere University</p>
+
+      <ul class="daniella-badge-cluster">
+        <li>Registration: 25/U/03765</li>
+        <li>DOB: 05 / Feb / 2006</li>
+        <li>Email: kayzdaniella@gmail.com</li>
+        <li>Favorite Color: Purple</li>
+      </ul>
     </section>
 
-    <!-- Section 2: Hobbies & Favorites -->
-    <section class="card">
-      <h2><i class="fa-solid fa-heart"></i> My Hobbies & Favorites</h2>
-      <div class="hobbies-grid">
-        <div class="hobby-card">
-          <i class="fa-solid fa-book"></i>
+    <!-- 3-Column Creative Gallery -->
+    <section>
+      <h2 class="daniella-section-title">
+        <i class="fa-solid fa-sparkles"></i> What Inspires Me
+      </h2>
+
+      <div class="daniella-gallery">
+        <div class="daniella-gallery-item">
+          <div class="daniella-item-icon">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
           <h3>Reading Novels</h3>
-          <p>I enjoy reading engaging novels and exploring creative stories during my free hours.</p>
+          <p>I love losing myself in captivating stories, great characters, and exploring creative fiction whenever I have free time.</p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-palette"></i>
-          <h3>Favorite Color: Purple</h3>
-          <p>Purple is my favorite color—it brings a peaceful, creative atmosphere to my workspace.</p>
+
+        <div class="daniella-gallery-item">
+          <div class="daniella-item-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>The Color Purple</h3>
+          <p>Purple is my signature favorite shade. It brings a calm, positive, and imaginative feeling to my study desk and books.</p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-graduation-cap"></i>
+
+        <div class="daniella-gallery-item">
+          <div class="daniella-item-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
           <h3>Campus Learning</h3>
-          <p>Attending lectures, taking notes, and working alongside my classmates at Makerere University.</p>
+          <p>Attending lectures, taking organized notes, and collaborating with my fellow Group 7 teammates at Makerere University.</p>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: Student Blog / Campus Experience -->
-    <section class="card">
-      <h2><i class="fa-solid fa-pen-nib"></i> Student Blog</h2>
-      <div class="blog-box">
-        <h3>A Quiet Corner with a Good Book</h3>
-        <p>
-          University life can get busy with regular classes, coursework, and discussions. When I need a moment to unwind, there is nothing I like more than finding a quiet spot, opening up a great novel, and getting absorbed in the story.
-        </p>
-        <p>
-          I also have a special appreciation for the color purple—it always adds a pleasant touch to my notebooks, stationery, and room. Working with my group members on this website has been a rewarding project for all of us.
-        </p>
-      </div>
+    <!-- Campus Diary / Student Reflections -->
+    <section class="daniella-diary">
+      <div class="daniella-diary-header">Makerere Student Reflections</div>
+      <h3>Finding Calm and Balance on Campus</h3>
+      <p>
+        University life can move at high speed between lecture timetables, coursework deliverables, and group discussions. Whenever I need a moment to reset, finding a quiet corner and cracking open a great novel is my favorite escape.
+      </p>
+      <p>
+        Surrounding myself with my favorite shade of purple makes my study space feel welcoming and peaceful. Collaborating with my group members on this website has been a wonderful experience for all of us this semester!
+      </p>
     </section>
 
-    <!-- Section 4: Interactive Like and Comment Form -->
-    <section class="card">
-      <h2><i class="fa-solid fa-comments"></i> Leave a Message for Daniella</h2>
-      
-      <!-- Like Button -->
-      <div class="interactive-row">
-        <span>Support Daniella's page:</span>
-        <button id="like-btn" class="like-btn">
-          <i class="fa-solid fa-thumbs-up"></i> Like (<span id="like-count">0</span>)
+    <!-- Interactive Purple Wall -->
+    <section class="daniella-wall">
+      <h2 class="daniella-section-title">
+        <i class="fa-solid fa-comments"></i> Leave a Friendly Note
+      </h2>
+
+      <div class="daniella-cheer-bar">
+        <span>Send some support to Daniella:</span>
+        <button id="like-btn" class="daniella-cheer-btn">
+          <i class="fa-solid fa-thumbs-up"></i> Like Page (<span id="like-count">0</span>)
         </button>
       </div>
 
-      <!-- Comment Form -->
-      <form id="comment-form" class="comment-form">
+      <form id="comment-form" class="daniella-form">
         <input type="text" id="comment-author" placeholder="Your Name" required>
-        <textarea id="comment-message" placeholder="Write a message or feedback here..." required></textarea>
-        <button type="submit">Post Comment</button>
+        <textarea id="comment-message" placeholder="Write a cheerful note or message..." required></textarea>
+        <button type="submit">Post to Wall</button>
       </form>
 
-      <!-- Message List -->
       <div id="comments-list" class="comments-list"></div>
     </section>
 
-    <!-- Footer Navigation (Next & Previous) -->
-    <div class="footer-nav">
-      <a href="index.html">&larr; Previous: Bakhita</a>
-      <a href="ernest.html">Next: Ernest &rarr;</a>
+    <!-- Bottom Navigation Pager -->
+    <div class="daniella-pager">
+      <a href="index.html" class="daniella-pager-btn">&larr; Previous: Grace</a>
+      <a href="ernest.html" class="daniella-pager-btn">Next: Ernest &rarr;</a>
     </div>
 
     <footer>
@@ -122,7 +127,6 @@
 
   </main>
 
-  <!-- Interactive JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

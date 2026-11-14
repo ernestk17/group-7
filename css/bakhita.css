@@ -1,7 +1,9 @@
 /* ==========================================================================
    Nantume Bakhita Grace - Personal Webpage Stylesheet
    Makerere University - Group 7
-   Theme: Literary Journal & Reading Space
+   Theme: Modern Software Engineering Student Portfolio
+   Colors: Warm Sand (#faf9f6), Charcoal (#18181b), Crimson/Coral (#e11d48)
+   Font: Modern Clean Sans-Serif ('Inter', 'Segoe UI', system-ui, sans-serif)
    ========================================================================== */
 
 * {
@@ -11,21 +13,25 @@
 }
 
 body {
-  background-color: #faf7f2;
-  color: #292524;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  line-height: 1.7;
-  padding-bottom: 2.5rem;
+  background-color: #f7f6f2;
+  color: #18181b;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.65;
+  padding-bottom: 3rem;
 }
 
-header {
+/* 1. Grace's Modern Minimalist Navbar */
+.grace-navbar {
   background: #ffffff;
-  border-bottom: 1px solid #e7e5e4;
-  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #e4e4e7;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-container {
-  max-width: 860px;
+.grace-nav-inner {
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -34,310 +40,409 @@ header {
   gap: 1rem;
 }
 
-.logo {
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #9f1239;
+.grace-brand {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #18181b;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-nav {
+.grace-brand span {
+  color: #e11d48;
+}
+
+.grace-nav-links {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
-nav a {
+.grace-nav-links a {
   text-decoration: none;
-  font-size: 0.88rem;
-  color: #78716c;
-  padding: 0.35rem 0.8rem;
-  border-radius: 4px;
-  background: #fafaf9;
-  border: 1px solid #d6d3d1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #71717a;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
-nav a:hover {
-  color: #9f1239;
-  border-color: #9f1239;
+.grace-nav-links a:hover {
+  color: #e11d48;
+  background: #ffe4e6;
 }
 
-nav a.active {
-  background: #9f1239;
-  color: #ffffff;
-  border-color: #9f1239;
-}
-
-.container {
-  max-width: 860px;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
-}
-
-/* Content Cards (Uniform clean border, no highlighted single-edge strip) */
-.card {
-  background: #ffffff;
-  border: 1px solid #e7e5e4;
-  border-radius: 8px;
-  padding: 1.6rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Profile Section */
-.profile-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.profile-icon {
-  width: 80px;
-  height: 80px;
+.grace-nav-links a.active {
+  color: #e11d48;
   background: #fff1f2;
-  border: 2px solid #be123c;
-  border-radius: 50%;
+  font-weight: 700;
+  border: 1px solid #fecdd3;
+}
+
+/* 2. Asymmetrical 2-Column Portfolio Layout */
+.grace-layout {
+  max-width: 1080px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Left Sidebar (Sticky Bio & Quick Info) */
+.grace-sidebar {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grace-sidebar-card {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.grace-avatar-frame {
+  width: 72px;
+  height: 72px;
+  background: #fff1f2;
+  border: 2px solid #e11d48;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  color: #be123c;
-}
-
-.profile-info h1 {
-  font-size: 1.6rem;
-  color: #881337;
-  margin-bottom: 0.3rem;
-}
-
-.profile-subtitle {
-  color: #9f1239;
-  font-size: 0.95rem;
-  margin-bottom: 0.6rem;
-  font-style: italic;
-}
-
-.info-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.info-list li {
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  color: #9f1239;
-  padding: 0.25rem 0.7rem;
-  border-radius: 4px;
-  font-size: 0.84rem;
-}
-
-h2 {
-  font-size: 1.2rem;
-  color: #881337;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-h2 i {
-  color: #be123c;
-}
-
-/* Hobbies Grid (Clean uniform boxes, no highlighted edge strip) */
-.hobbies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.hobby-card {
-  background: #fafaf9;
-  border: 1px solid #e7e5e4;
-  border-radius: 6px;
-  padding: 1.2rem;
-  text-align: center;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.hobby-card:hover {
-  transform: translateY(-2px);
-  border-color: #be123c;
-}
-
-.hobby-card i {
   font-size: 1.8rem;
-  color: #be123c;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-
-.hobby-card h3 {
-  font-size: 1rem;
-  color: #881337;
-  margin-bottom: 0.3rem;
-}
-
-.hobby-card p {
-  font-size: 0.85rem;
-  color: #57534e;
-}
-
-/* Blog Box (Clean uniform border) */
-.blog-box {
-  background: #fafaf9;
-  border: 1px solid #e7e5e4;
-  border-radius: 6px;
-  padding: 1.25rem;
-}
-
-.blog-box h3 {
-  font-size: 1.1rem;
-  color: #881337;
-  margin-bottom: 0.6rem;
-}
-
-.blog-box p {
-  color: #44403c;
-  font-size: 0.92rem;
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
-
-/* Interactive Like & Comment Form */
-.interactive-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  padding: 1rem 1.25rem;
-  border-radius: 6px;
+  color: #e11d48;
   margin-bottom: 1.25rem;
 }
 
-.like-btn {
-  background: #9f1239;
+.grace-sidebar-card h1 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #18181b;
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
+}
+
+.grace-title-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e11d48;
+  margin-bottom: 1rem;
+}
+
+.grace-meta-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.grace-meta-table tr {
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.grace-meta-table td {
+  padding: 0.5rem 0;
+}
+
+.grace-meta-table td.label {
+  color: #71717a;
+  font-weight: 500;
+  width: 40%;
+}
+
+.grace-meta-table td.value {
+  color: #18181b;
+  font-weight: 600;
+}
+
+/* Left Sidebar Like Button */
+.grace-like-panel {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.grace-like-panel p {
+  font-size: 0.85rem;
+  color: #9f1239;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.grace-like-btn {
+  background: #e11d48;
   color: #ffffff;
   border: none;
-  padding: 0.55rem 1.25rem;
+  padding: 0.6rem 1.4rem;
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.grace-like-btn:hover {
+  background: #be123c;
+}
+
+/* 3. Right Main Content Area */
+.grace-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.grace-panel {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.grace-panel-heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #18181b;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.grace-panel-heading i {
+  color: #e11d48;
+  font-size: 1.1rem;
+}
+
+/* Hero Introduction */
+.grace-hero-intro {
+  font-size: 1.05rem;
+  color: #3f3f46;
+  line-height: 1.7;
+}
+
+.grace-hero-intro strong {
+  color: #18181b;
+}
+
+/* Hobbies: Horizontal Modern Cards */
+.grace-hobbies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.grace-hobby-row {
+  background: #fafaf9;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: border-color 0.2s ease;
+}
+
+.grace-hobby-row:hover {
+  border-color: #f43f5e;
+}
+
+.grace-hobby-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #e11d48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.grace-hobby-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18181b;
+  margin-bottom: 0.25rem;
+}
+
+.grace-hobby-content p {
+  font-size: 0.88rem;
+  color: #52525b;
+  line-height: 1.5;
+}
+
+/* Student Journal / Essay */
+.grace-article {
+  background: #fafaf9;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.grace-article-meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.grace-article-meta span.category {
+  color: #e11d48;
+}
+
+.grace-article h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #18181b;
+  margin-bottom: 0.75rem;
+}
+
+.grace-article p {
+  font-size: 0.94rem;
+  color: #3f3f46;
+  margin-bottom: 0.85rem;
+  line-height: 1.7;
+}
+
+/* Comments Form & List */
+.grace-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.grace-comment-form input,
+.grace-comment-form textarea {
+  background: #fafaf9;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
   font-family: inherit;
+  font-size: 0.9rem;
+  color: #18181b;
+}
+
+.grace-comment-form input:focus,
+.grace-comment-form textarea:focus {
+  outline: none;
+  border-color: #e11d48;
+  background: #ffffff;
+}
+
+.grace-comment-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.grace-comment-form button {
+  align-self: flex-start;
+  background: #18181b;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.like-btn:hover {
-  background: #881337;
+.grace-comment-form button:hover {
+  background: #e11d48;
 }
 
-.comment-form {
+.comments-list {
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.comment-form input,
-.comment-form textarea {
-  background: #fafaf9;
-  border: 1px solid #d6d3d1;
-  color: #292524;
-  padding: 0.65rem 0.9rem;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 0.9rem;
-}
-
-.comment-form input:focus,
-.comment-form textarea:focus {
-  outline: none;
-  border-color: #be123c;
-}
-
-.comment-form textarea {
-  resize: vertical;
-  min-height: 65px;
-}
-
-.comment-form button {
-  align-self: flex-start;
-  background: #9f1239;
-  color: #ffffff;
-  border: none;
-  padding: 0.55rem 1.3rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.comment-form button:hover {
-  background: #881337;
-}
-
-.comments-list {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
 .comment-item {
   background: #fafaf9;
-  border: 1px solid #e7e5e4;
-  border-radius: 4px;
-  padding: 0.75rem 1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
   font-size: 0.88rem;
 }
 
 .comment-author {
-  font-weight: bold;
-  color: #881337;
-  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: #18181b;
+  margin-bottom: 0.25rem;
 }
 
 .comment-item p {
-  color: #44403c;
+  color: #52525b;
 }
 
-.footer-nav {
+/* Footer & Navigation */
+.grace-footer-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e4e4e7;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
-.footer-nav a {
+.grace-footer-btn {
   text-decoration: none;
   font-size: 0.85rem;
-  color: #78716c;
+  font-weight: 600;
+  color: #18181b;
   background: #ffffff;
-  border: 1px solid #d6d3d1;
-  padding: 0.45rem 1rem;
-  border-radius: 4px;
+  border: 1px solid #e4e4e7;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
   transition: all 0.2s ease;
 }
 
-.footer-nav a:hover {
-  color: #9f1239;
-  border-color: #9f1239;
+.grace-footer-btn:hover {
+  color: #e11d48;
+  border-color: #e11d48;
 }
 
 footer {
   text-align: center;
   font-size: 0.82rem;
-  color: #78716c;
+  color: #a1a1aa;
   margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .grace-layout {
+    grid-template-columns: 1fr;
+  }
+  .grace-sidebar {
+    position: static;
+  }
 }
