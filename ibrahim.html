@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lubega Ibrahim &bull; Sportsman & Student Profile</title>
+  <title>Lubega Ibrahim &bull; Professional Profile &bull; Makerere University</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/ibrahim.css">
@@ -11,12 +11,12 @@
 <body data-student="ibrahim">
 
   <!-- ======================================================================
-       1. CLUBHOUSE GREEN & GOLD TOPBAR
+       1. LINKEDIN TOPBAR & NAVIGATION
        ====================================================================== -->
-  <header class="clubhouse-topbar">
-    <div class="clubhouse-nav-inner">
-      <a href="index.html" class="clubhouse-title">LUBEGA IBRAHIM &bull; MAKERERE</a>
-      <nav class="clubhouse-links">
+  <header class="linkedin-navbar">
+    <div class="linkedin-nav-inner">
+      <a href="index.html" class="linkedin-logo">Group<span>7</span> Network</a>
+      <nav class="linkedin-nav-links">
         <a href="index.html">Grace</a>
         <a href="daniella.html">Daniella</a>
         <a href="ernest.html">Ernest</a>
@@ -28,111 +28,139 @@
   </header>
 
   <!-- ======================================================================
-       2. MAIN DOSSIER WRAPPER
+       2. MAIN LINKEDIN FEED CONTAINER
        ====================================================================== -->
-  <main class="ibrahim-dossier-wrap">
+  <main class="linkedin-container">
 
-    <!-- Dossier Profile Card with Formal Table -->
-    <section class="dossier-header-card">
-      <div class="dossier-headline" style="margin-bottom: 1.25rem;">
+    <!-- Profile Card with Cover Photo Banner -->
+    <section class="linkedin-profile-card">
+      <div class="linkedin-cover-photo"></div>
+
+      <div class="linkedin-profile-body">
+        <div class="linkedin-avatar-row">
+          <div class="linkedin-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="linkedin-action-bar">
+            <!-- Endorse Button as Like Button -->
+            <button id="like-btn" class="linkedin-endorse-btn">
+              <i class="fa-solid fa-thumbs-up"></i> Endorse Profile (<span id="like-count">0</span>)
+            </button>
+          </div>
+        </div>
+
         <h1>Lubega Ibrahim</h1>
-        <p class="status-note">Undergraduate Student &bull; Sportsman at Makerere University</p>
-      </div>
+        <div class="linkedin-headline">
+          Undergraduate Student at Makerere University &bull; Competitive Golfer & Football Athlete
+        </div>
+        <div class="linkedin-location">
+          Kampala, Central Region, Uganda &bull; Makerere University
+        </div>
 
-      <!-- Formal Profile Details Table -->
-      <table class="dossier-table">
-        <tr>
-          <td class="col-head">Date of Birth</td>
-          <td class="col-val">01 / January / 2005</td>
-        </tr>
-        <tr>
-          <td class="col-head">Institutional Email</td>
-          <td class="col-val">lubegaibra24@gmail.com</td>
-        </tr>
-        <tr>
-          <td class="col-head">University Campus</td>
-          <td class="col-val">Makerere University, Kampala</td>
-        </tr>
-        <tr>
-          <td class="col-head">Project Team</td>
-          <td class="col-val">Group 7 Web Development Team</td>
-        </tr>
-      </table>
+        <div class="linkedin-pills-row">
+          <span class="linkedin-pill">DOB: 01 / Jan / 2005</span>
+          <span class="linkedin-pill">lubegaibra24@gmail.com</span>
+          <span class="linkedin-pill">Team: Group 7</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Dual-Sport & Academic Showcase -->
-    <section>
-      <h2 class="clubhouse-heading">
-        <i class="fa-solid fa-trophy"></i> Sporting Disciplines & Interests
-      </h2>
+    <!-- About Section -->
+    <section class="linkedin-section-card">
+      <h2><i class="fa-solid fa-circle-user"></i> About</h2>
+      <p style="font-size: 0.95rem; color: #333333; line-height: 1.7;">
+        I am an undergraduate student at Makerere University passionate about academic growth and high-performance athletics. Outside my lecture halls and group assignments, I compete in golf and football—two disciplines that instill focus, strategic planning, physical resilience, and decisive team communication.
+      </p>
+    </section>
 
-      <div class="dual-sport-grid">
-        <div class="sport-showcase-box">
-          <div class="sport-icon-tag">
+    <!-- Experience / Hobbies Section -->
+    <section class="linkedin-section-card">
+      <h2><i class="fa-solid fa-briefcase"></i> Activities & Sports Disciplines</h2>
+
+      <div class="linkedin-exp-list">
+
+        <!-- Experience 1: Golf -->
+        <div class="linkedin-exp-item">
+          <div class="linkedin-exp-icon">
             <i class="fa-solid fa-golf-ball-tee"></i>
           </div>
-          <h3>Playing Golf</h3>
-          <p>Practicing precision, body alignment, and calm calculation on the fairway. Golf is a discipline of patience and mental composure.</p>
+          <div class="linkedin-exp-details">
+            <h3>Competitive Golfer &bull; Fairway Precision</h3>
+            <div class="linkedin-exp-company">Uganda Golf Circuit &bull; Self-Directed Athlete</div>
+            <div class="linkedin-exp-dates">2023 - Present &bull; Active Discipline</div>
+            <p>
+              Practicing course strategy, swing mechanics, and emotional composure under pressure. Golf demands calculated risk management and patience over 18 holes.
+            </p>
+          </div>
         </div>
 
-        <div class="sport-showcase-box">
-          <div class="sport-icon-tag">
+        <!-- Experience 2: Football -->
+        <div class="linkedin-exp-item">
+          <div class="linkedin-exp-icon">
             <i class="fa-solid fa-futbol"></i>
           </div>
-          <h3>Playing Football</h3>
-          <p>Competing in fast-paced matches with coursemates on campus. Football develops stamina, endurance, and decisive team communication.</p>
+          <div class="linkedin-exp-details">
+            <h3>Football Athlete &bull; Midfield Coordination</h3>
+            <div class="linkedin-exp-company">Campus & Intramural League &bull; Makerere</div>
+            <div class="linkedin-exp-dates">2024 - Present</div>
+            <p>
+              Active participation in competitive campus matches. Developing high stamina, spatial awareness, tactical transitions, and teamwork with coursemates.
+            </p>
+          </div>
         </div>
 
-        <div class="sport-showcase-box">
-          <div class="sport-icon-tag">
+        <!-- Experience 3: Undergraduate -->
+        <div class="linkedin-exp-item">
+          <div class="linkedin-exp-icon">
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
-          <h3>University Academics</h3>
-          <p>Attending daily lectures, participating in tutorial discussions, and collaborating on semester group coursework at Makerere.</p>
+          <div class="linkedin-exp-details">
+            <h3>Undergraduate Scholar &bull; Group 7 Contributor</h3>
+            <div class="linkedin-exp-company">Makerere University, Kampala</div>
+            <div class="linkedin-exp-dates">Current Academic Year</div>
+            <p>
+              Attending daily lectures, participating in tutorial debates, and collaborating on web development group assignments with my peers.
+            </p>
+          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Course Notes & Reflections -->
-    <section class="course-notes-card">
-      <h2 class="clubhouse-heading">
-        <i class="fa-solid fa-book-open"></i> Course Notes & Campus Reflections
-      </h2>
-      <h3>The Composure of Golf and the Energy of Football</h3>
-      <p>
-        Being a university student requires steady focus and mental clarity—qualities that golf teaches with every swing. On the golf course, there is no rushing; each shot demands patience, calculation, and composed nerves.
-      </p>
-      <p>
-        Football provides the perfect complement: fast-paced teamwork, physical stamina, and camaraderie with coursemates. Balancing both sports after classes helps me approach university challenges with a calm and determined mindset.
-      </p>
+    <!-- Featured Thought Piece / Article -->
+    <section class="linkedin-section-card">
+      <h2><i class="fa-solid fa-newspaper"></i> Featured Thought Piece</h2>
+      <div class="linkedin-article-box">
+        <h3>How Sports Discipline Drives Academic Focus at Makerere</h3>
+        <p>
+          Balancing higher education with sports requires deliberate time management. The calm focus needed on the putting green mirrors the concentration required during complex university revisions.
+        </p>
+        <p>
+          Meanwhile, the physical intensity of football provides a healthy release valve for academic stress. Combining mental precision and physical energy keeps my university performance consistent.
+        </p>
+      </div>
     </section>
 
-    <!-- Clubhouse Register & Endorsement -->
-    <section class="register-box">
-      <h2 class="clubhouse-heading">
-        <i class="fa-solid fa-pen-fancy"></i> Clubhouse Register
-      </h2>
+    <!-- Recommendations & Comments Section -->
+    <section class="linkedin-section-card">
+      <h2><i class="fa-solid fa-comments"></i> Endorsements & Recommendations</h2>
+      <p style="font-size: 0.88rem; color: #666666; margin-bottom: 0.75rem;">
+        Leave a professional endorsement or note for Ibrahim:
+      </p>
 
-      <div class="register-endorse-bar">
-        <span>Commend Ibrahim's academic and sporting journey:</span>
-        <button id="like-btn" class="btn-endorse">
-          <i class="fa-solid fa-thumbs-up"></i> Endorse (<span id="like-count">0</span>)
-        </button>
-      </div>
-
-      <form id="comment-form" class="register-form">
-        <input type="text" id="comment-author" placeholder="Your Name or Designation" required>
-        <textarea id="comment-message" placeholder="Sign an entry or message in the register..." required></textarea>
-        <button type="submit">Sign Register</button>
+      <form id="comment-form" class="linkedin-rec-form">
+        <input type="text" id="comment-author" placeholder="Your Full Name / Title" required>
+        <textarea id="comment-message" placeholder="Write a recommendation or comment..." required></textarea>
+        <button type="submit">Submit Recommendation</button>
       </form>
 
       <div id="comments-list" class="comments-list"></div>
     </section>
 
     <!-- Pager Navigation -->
-    <div class="clubhouse-pager">
-      <a href="ntwari.html" class="clubhouse-btn">&larr; Previous: Joseph</a>
-      <a href="matthew.html" class="clubhouse-btn">Next: Matthew &rarr;</a>
+    <div class="linkedin-pager">
+      <a href="ntwari.html">&larr; Previous: Joseph</a>
+      <a href="matthew.html">Next: Matthew &rarr;</a>
     </div>
 
     <footer>

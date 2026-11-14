@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ntwari Joseph David - Group 7</title>
+  <title>Ntwari Joseph David &bull; Player Profile #10 &bull; Makerere</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/ntwari.css">
@@ -11,13 +11,13 @@
 <body data-student="ntwari">
 
   <!-- ======================================================================
-       1. NAVIGATION BAR
+       1. SPORTS TICKER & NAVIGATION BAR
        ====================================================================== -->
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo">Group 7 &bull; Makerere</a>
-      <nav>
-        <a href="index.html">Bakhita</a>
+  <header class="sports-topbar">
+    <div class="sports-nav-inner">
+      <a href="index.html" class="sports-logo">SPORTS HUB <span>//</span> MAK</a>
+      <nav class="sports-nav-links">
+        <a href="index.html">Grace</a>
         <a href="daniella.html">Daniella</a>
         <a href="ernest.html">Ernest</a>
         <a href="ntwari.html" class="active">Joseph</a>
@@ -28,87 +28,115 @@
   </header>
 
   <!-- ======================================================================
-       2. MAIN CONTENT
+       2. MAIN STADIUM MATCHCENTER CONTAINER
        ====================================================================== -->
-  <main class="container">
+  <main class="stadium-container">
 
-    <!-- Section 1: About Joseph -->
-    <section class="card">
-      <div class="profile-header">
-        <div class="profile-info">
-          <h1>Ntwari Joseph David</h1>
-          <p class="profile-subtitle">Undergraduate Student at Makerere University</p>
-          <ul class="info-list">
-            <li>DOB: 26 / 04 / 2006</li>
-            <li>Email: ntwarii.10@gmail.com</li>
-            <li>Institution: Makerere University</li>
-            <li>Role: Group 7 Member</li>
-          </ul>
+    <!-- Hero Player Card with Large Squad Number -->
+    <section class="player-hero-banner">
+      <div class="player-hero-meta">
+        <h1>Ntwari Joseph David</h1>
+        <div class="player-club-tag">
+          <i class="fa-solid fa-shield-halved"></i> Makerere University Men's Football Squad
         </div>
+
+        <ul class="player-specs-list">
+          <li>Squad Role: Midfield / Attack</li>
+          <li>DOB: 26 / 04 / 2006</li>
+          <li>Email: ntwarii.10@gmail.com</li>
+          <li>Squad: Group 7</li>
+        </ul>
+      </div>
+
+      <!-- Large Number 10 Jersey Box -->
+      <div class="player-squad-number-box">
+        <div class="squad-digit">10</div>
+        <div class="squad-caption">SQUAD NO.</div>
       </div>
     </section>
 
-    <!-- Section 2: Hobbies & Interests -->
-    <section class="card">
-      <h2><i class="fa-solid fa-heart"></i> My Hobbies & Interests</h2>
-      <div class="hobbies-grid">
-        <div class="hobby-card">
-          <i class="fa-solid fa-futbol"></i>
+    <!-- MVP Cheer Bar -->
+    <div class="mvp-cheer-bar">
+      <span>Vote Joseph as Matchday Player of the Round:</span>
+      <button id="like-btn" class="btn-cheer-goal">
+        <i class="fa-solid fa-thumbs-up"></i> Fan Vote & Cheer (<span id="like-count">0</span>)
+      </button>
+    </div>
+
+    <!-- Matchcenter Performance Attributes -->
+    <section class="matchcenter-section">
+      <h2><i class="fa-solid fa-chart-simple"></i> Matchday Disciplines & Routines</h2>
+
+      <div class="sports-attributes-grid">
+
+        <!-- Attribute 1: Football -->
+        <div class="attribute-card">
+          <div class="attribute-icon-badge">
+            <i class="fa-solid fa-futbol"></i>
+          </div>
           <h3>Playing Football</h3>
-          <p>I love playing football matches with friends on campus whenever we have some free time.</p>
+          <p>
+            Competitive pitch matches and regular drills with coursemates on campus. Football develops fast reflexes, game vision, and active stamina.
+          </p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-bed"></i>
-          <h3>Rest & Sleeping</h3>
-          <p>Taking solid rest and catching good sleep helps me recover after long study days and sports.</p>
+
+        <!-- Attribute 2: Sleep & Recovery -->
+        <div class="attribute-card">
+          <div class="attribute-icon-badge">
+            <i class="fa-solid fa-bed"></i>
+          </div>
+          <h3>Recovery & Rest</h3>
+          <p>
+            Prioritizing deep, consistent sleep to recover muscle energy and maintain sharp mental focus between heavy training and academic lectures.
+          </p>
         </div>
-        <div class="hobby-card">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h3>Campus Life</h3>
-          <p>Enjoying my undergraduate journey, collaborating with classmates, and tackling group assignments.</p>
+
+        <!-- Attribute 3: Campus Academics -->
+        <div class="attribute-card">
+          <div class="attribute-icon-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>Undergraduate Studies</h3>
+          <p>
+            Attending regular university lectures, participating in group revisions, and contributing to semester coursework goals with Group 7 peers.
+          </p>
         </div>
+
       </div>
     </section>
 
-    <!-- Section 3: Student Blog / Campus Experience -->
-    <section class="card">
-      <h2><i class="fa-solid fa-pen-nib"></i> Student Blog</h2>
-      <div class="blog-box">
-        <h3>Football Matches and Good Rest</h3>
+    <!-- Matchday Post-Game Report -->
+    <section class="matchcenter-section">
+      <h2><i class="fa-solid fa-newspaper"></i> Matchday Dispatch & Campus Life</h2>
+      <div class="match-report-box">
+        <h3>Competitive Pitch Energy and Crucial Recovery</h3>
         <p>
-          As a student at Makerere University, life moves pretty fast between lectures, coursework deadlines, and group projects. For me, playing football is the best way to release stress, enjoy the afternoon, and stay connected with friends.
+          As an undergraduate student at Makerere University, every week is packed with lecture deadlines, study group sessions, and assignments. Football is where I channel my physical drive and refresh my mind.
         </p>
         <p>
-          After an active game on the pitch and heavy study hours, getting well-earned sleep is essential. Keeping things balanced, active, and straightforward keeps my mind clear and ready for the week ahead.
+          Playing with friends creates natural team chemistry and sharpens focus. And when the final whistle blows, giving the body adequate rest and deep sleep ensures I am recharged and ready for tomorrow's coursework challenges.
         </p>
       </div>
     </section>
 
-    <!-- Section 4: Interactive Like and Comment Form -->
-    <section class="card">
-      <h2><i class="fa-solid fa-comments"></i> Leave a Message for Joseph</h2>
-      
-      <!-- Like Button -->
-      <div class="interactive-row">
-        <span>Support Joseph's page:</span>
-        <button id="like-btn" class="like-btn">
-          <i class="fa-solid fa-thumbs-up"></i> Like (<span id="like-count">0</span>)
-        </button>
-      </div>
+    <!-- Locker Room Fan Shoutbox -->
+    <section class="matchcenter-section">
+      <h2><i class="fa-solid fa-bullhorn"></i> Locker Room Fan Shoutbox</h2>
+      <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 0.75rem;">
+        Post a cheer or matchday message for Joseph:
+      </p>
 
-      <!-- Comment Form -->
-      <form id="comment-form" class="comment-form">
-        <input type="text" id="comment-author" placeholder="Your Name" required>
-        <textarea id="comment-message" placeholder="Write a message or feedback here..." required></textarea>
-        <button type="submit">Post Comment</button>
+      <form id="comment-form" class="shoutbox-form">
+        <input type="text" id="comment-author" placeholder="Fan / Teammate Name" required>
+        <textarea id="comment-message" placeholder="Drop your shout in the locker room..." required></textarea>
+        <button type="submit">Submit Shout</button>
       </form>
 
-      <!-- Message List -->
       <div id="comments-list" class="comments-list"></div>
     </section>
 
-    <!-- Footer Navigation (Next & Previous) -->
-    <div class="footer-nav">
+    <!-- Bottom Navigation Pager -->
+    <div class="stadium-pager">
       <a href="ernest.html">&larr; Previous: Ernest</a>
       <a href="ibrahim.html">Next: Ibrahim &rarr;</a>
     </div>
@@ -119,7 +147,6 @@
 
   </main>
 
-  <!-- Interactive JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

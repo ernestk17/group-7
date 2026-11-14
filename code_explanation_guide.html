@@ -120,30 +120,30 @@
     <strong>How to use this guide:</strong> Keep this PDF open on your phone during your presentation or defense. It gives you plain, direct answers to explain every single file, tag, CSS rule, and JavaScript function to your lecturer with confidence.
   </div>
 
-  <h2>1. Overview of the Website Project</h2>
+  <h2>1. Overview of the 6 Unique Website Archetypes</h2>
   <p>
-    Our website represents six Makerere University students in Group 7. Each student has their own webpage built with their own personal style and hobbies. The pages are united into one website through a shared top navigation bar and footer buttons.
+    Our website represents six Makerere University students in Group 7. Each student designed their page using a completely different real-world website archetype, proving separate and individual design work:
   </p>
   <ul>
-    <li><strong>index.html</strong> &bull; Nantume Bakhita Grace (Literary journal theme, novel reading)</li>
-    <li><strong>daniella.html</strong> &bull; Kagoda Daniella Evelyn (Purple aesthetic theme, reading)</li>
-    <li><strong>ernest.html</strong> &bull; Kayondo Ernest (Dark tech theme, aspiring DevOps engineer)</li>
-    <li><strong>ntwari.html</strong> &bull; Ntwari Joseph David (Green sports theme, football)</li>
-    <li><strong>ibrahim.html</strong> &bull; Lubega Ibrahim (Classic green & gold theme, golf & football)</li>
-    <li><strong>matthew.html</strong> &bull; Musiinguzi Matthew Jekyns (Dark contrast theme, basketball & chess)</li>
+    <li><strong>ernest.html</strong> &bull; <strong>Kayondo Ernest:</strong> <em>Instagram Profile & Feed Layout</em> (Story Highlights for hobbies, posts feed, follower stats).</li>
+    <li><strong>daniella.html</strong> &bull; <strong>Kagoda Daniella Evelyn:</strong> <em>Notion Digital Workspace</em> (Page properties, breadcrumb, Kanban board columns).</li>
+    <li><strong>ibrahim.html</strong> &bull; <strong>Lubega Ibrahim:</strong> <em>LinkedIn Professional Profile</em> (Cover photo, headline, experience timeline for golf & football).</li>
+    <li><strong>ntwari.html</strong> &bull; <strong>Ntwari Joseph David:</strong> <em>ESPN / Sports Match Center</em> (Large squad jersey #10, performance radar, match report).</li>
+    <li><strong>index.html</strong> &bull; <strong>Nantume Bakhita Grace:</strong> <em>Modern Software Developer Portfolio</em> (Asymmetrical sidebar + content stream).</li>
+    <li><strong>matthew.html</strong> &bull; <strong>Musiinguzi Matthew Jekyns:</strong> <em>Tactical Chess & Basketball Arena</em> (High-contrast dark court layout).</li>
   </ul>
   <p>
-    <strong>Key Design Decisions Made:</strong>
+    <strong>Key Shared Principles:</strong>
   </p>
   <ul>
-    <li><strong>No Emojis:</strong> All icons are standard vector icons loaded via the industry-standard Font Awesome CDN.</li>
-    <li><strong>No Artificial Highlight Strips:</strong> All cards have clean, uniform, balanced borders all around.</li>
+    <li><strong>No Emojis:</strong> All icons are standard vector icons loaded via Font Awesome CDN.</li>
+    <li><strong>No Artificial Highlight Strips:</strong> All cards have clean, uniform, balanced borders.</li>
     <li><strong>Individual Stylesheets:</strong> Each student has their own CSS file (e.g. <code>css/ernest.css</code>), proving separate work.</li>
   </ul>
 
   <div class="page-break"></div>
 
-  <h2>2. Line-by-Line Breakdown: Kayondo Ernest's HTML (ernest.html)</h2>
+  <h2>2. Line-by-Line Breakdown: Kayondo Ernest's Webpage (ernest.html)</h2>
 
   <h3>Section A: Document Header & Font Awesome Link</h3>
   <pre><code>&lt;!DOCTYPE html&gt;
@@ -151,7 +151,7 @@
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Kayondo Ernest - Group 7&lt;/title&gt;
+  &lt;title&gt;Kayondo Ernest (@ernest.devops) &bull; Makerere University&lt;/title&gt;
   &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;
   &lt;link rel="stylesheet" href="css/ernest.css"&gt;
 &lt;/head&gt;</code></pre>
@@ -161,15 +161,15 @@
     <li><code>&lt;meta charset="UTF-8"&gt;</code>: Sets standard character encoding for text.</li>
     <li><code>&lt;meta name="viewport" ...&gt;</code>: Ensures the webpage adjusts nicely on mobile phones and tablets.</li>
     <li><code>&lt;link rel="stylesheet" ... font-awesome ...&gt;</code>: Connects the external Font Awesome library so we can display clean icons (like the swimming, running, and gym icons) instead of emojis.</li>
-    <li><code>&lt;link rel="stylesheet" href="css/ernest.css"&gt;</code>: Links Ernest's personal stylesheet.</li>
+    <li><code>&lt;link rel="stylesheet" href="css/ernest.css"&gt;</code>: Links Ernest's personal stylesheet with the Instagram UI theme.</li>
   </ul>
 
   <h3>Section B: Navigation Bar</h3>
-  <pre><code>&lt;header&gt;
-  &lt;div class="nav-container"&gt;
-    &lt;a href="index.html" class="logo"&gt;Group 7 &bull; Makerere&lt;/a&gt;
-    &lt;nav&gt;
-      &lt;a href="index.html"&gt;Bakhita&lt;/a&gt;
+  <pre><code>&lt;header class="ig-top-header"&gt;
+  &lt;div class="ig-top-container"&gt;
+    &lt;a href="index.html" class="ig-brand"&gt;Instagram &lt;span&gt;Group 7&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="ig-nav-links"&gt;
+      &lt;a href="index.html"&gt;Grace&lt;/a&gt;
       &lt;a href="daniella.html"&gt;Daniella&lt;/a&gt;
       &lt;a href="ernest.html" class="active"&gt;Ernest&lt;/a&gt;
       &lt;a href="ntwari.html"&gt;Joseph&lt;/a&gt;
@@ -180,153 +180,91 @@
 &lt;/header&gt;</code></pre>
   <p><strong>How to explain this to the lecturer:</strong></p>
   <ul>
-    <li>This <code>&lt;header&gt;</code> unites all 6 individual student pages into one complete group website.</li>
-    <li>The link for Ernest has <code>class="active"</code>, which our CSS uses to highlight his tab in blue so visitors immediately know which page they are currently on.</li>
+    <li>Styled like Instagram's sticky top header with logo on the left and navigation on the right.</li>
+    <li>The link for Ernest has <code>class="active"</code>, which highlights his tab in Instagram blue (<code>#0095f6</code>).</li>
   </ul>
 
-  <h3>Section C: About Me Card</h3>
-  <pre><code>&lt;section class="card"&gt;
-  &lt;div class="profile-header"&gt;
-    &lt;div class="profile-info"&gt;
-      &lt;h1&gt;Kayondo Ernest&lt;/h1&gt;
-      &lt;p class="profile-subtitle"&gt;Student at Makerere University &bull; Aspiring DevOps Engineer&lt;/p&gt;
-      &lt;ul class="info-list"&gt;
-        &lt;li&gt;Institution: Makerere University&lt;/li&gt;
-        &lt;li&gt;Career Goal: DevOps Engineer&lt;/li&gt;
-        &lt;li&gt;Role: Group 7 Member&lt;/li&gt;
-      &lt;/ul&gt;
+  <h3>Section C: Instagram Profile Header & Story Highlights</h3>
+  <pre><code>&lt;section class="ig-profile-card"&gt;
+  &lt;div class="ig-profile-top"&gt;
+    &lt;div class="ig-avatar-ring"&gt;
+      &lt;div class="ig-avatar-inner"&gt;&lt;i class="fa-solid fa-code"&gt;&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
+    &lt;div class="ig-meta-side"&gt;
+      &lt;div class="ig-username-row"&gt;
+        &lt;span class="ig-username"&gt;ernest.devops&lt;/span&gt;
+        &lt;i class="fa-solid fa-circle-check ig-verified"&gt;&lt;/i&gt;
+        &lt;button id="like-btn" class="ig-btn-primary"&gt;
+          &lt;i class="fa-solid fa-thumbs-up"&gt;&lt;/i&gt; Follow & Like (&lt;span id="like-count"&gt;0&lt;/span&gt;)
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="ig-stats-row"&gt;
+        &lt;div&gt;&lt;span&gt;3&lt;/span&gt; posts&lt;/div&gt;
+        &lt;div&gt;&lt;span&gt;256&lt;/span&gt; followers&lt;/div&gt;
+        &lt;div&gt;&lt;span&gt;128&lt;/span&gt; following&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="ig-bio"&gt;
+        &lt;h1&gt;Kayondo Ernest&lt;/h1&gt;
+        &lt;p class="tagline"&gt;Aspiring DevOps & Cloud Infrastructure Engineer&lt;/p&gt;
+        &lt;p&gt;Undergraduate Student at Makerere University, Kampala&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Story Highlights for Hobbies --&gt;
+  &lt;div class="ig-stories-bar"&gt;
+    &lt;div class="ig-story-item"&gt;Swimming&lt;/div&gt;
+    &lt;div class="ig-story-item"&gt;Running&lt;/div&gt;
+    &lt;div class="ig-story-item"&gt;Gym&lt;/div&gt;
+    &lt;div class="ig-story-item"&gt;Gaming&lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre>
   <p><strong>How to explain this to the lecturer:</strong></p>
   <ul>
-    <li>Uses semantic <code>&lt;section class="card"&gt;</code> to create a clean profile container.</li>
-    <li>Cleanly displays Ernest's name, institution, and career goal without distracting placeholder elements.</li>
-    <li>Lists his role and details clearly for readers.</li>
+    <li>Uses the signature Instagram colorful gradient border ring around the avatar.</li>
+    <li>Displays follower stats, verified checkmark, and student bio.</li>
+    <li>Ernest's 4 genuine hobbies (Swimming, Running, Gym, Gaming) are displayed as circular Instagram Story Highlights.</li>
   </ul>
 
   <div class="page-break"></div>
 
-  <h3>Section D: Hobbies & Interests Grid</h3>
-  <pre><code>&lt;section class="card"&gt;
-  &lt;h2&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; My Hobbies & Interests&lt;/h2&gt;
-  &lt;div class="hobbies-grid"&gt;
-    &lt;div class="hobby-card"&gt;
-      &lt;i class="fa-solid fa-person-swimming"&gt;&lt;/i&gt;
-      &lt;h3&gt;Swimming&lt;/h3&gt;
-      &lt;p&gt;I enjoy swimming to stay in shape, improve lung capacity...&lt;/p&gt;
+  <h3>Section D: Instagram Posts Feed</h3>
+  <pre><code>&lt;div class="ig-posts-column"&gt;
+  &lt;!-- Post 1: Fitness & Morning Runs --&gt;
+  &lt;article class="ig-post-card"&gt;
+    &lt;div class="ig-post-header"&gt;...&lt;/div&gt;
+    &lt;div class="ig-post-body-visual"&gt;Morning Campus Jogs & Recovery Swimming&lt;/div&gt;
+    &lt;div class="ig-post-actions"&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; ...&lt;/div&gt;
+    &lt;div class="ig-post-caption"&gt;
+      &lt;strong&gt;ernest.devops&lt;/strong&gt; Morning run around Makerere campus...
     &lt;/div&gt;
-    &lt;div class="hobby-card"&gt;
-      &lt;i class="fa-solid fa-person-running"&gt;&lt;/i&gt;
-      &lt;h3&gt;Running&lt;/h3&gt;
-      &lt;p&gt;Regular morning or evening jogs around campus...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="hobby-card"&gt;
-      &lt;i class="fa-solid fa-dumbbell"&gt;&lt;/i&gt;
-      &lt;h3&gt;Gyming&lt;/h3&gt;
-      &lt;p&gt;Working out at the gym is a regular habit of mine...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="hobby-card"&gt;
-      &lt;i class="fa-solid fa-gamepad"&gt;&lt;/i&gt;
-      &lt;h3&gt;Gaming&lt;/h3&gt;
-      &lt;p&gt;Playing video games with friends in the evening...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+  &lt;/article&gt;
+  &lt;!-- Post 2: DevOps Engineering Journey --&gt;
+  &lt;!-- Post 3: Evening Gaming Sessions --&gt;
+&lt;/div&gt;</code></pre>
   <p><strong>How to explain this to the lecturer:</strong></p>
   <ul>
-    <li>Contains Ernest's 4 genuine hobbies: Swimming, Running, Gyming, and Gaming.</li>
-    <li>Each hobby has its own icon using Font Awesome (person-swimming, person-running, dumbbell, gamepad).</li>
-    <li>The container <code>.hobbies-grid</code> uses CSS Grid to make all four boxes sit side by side on desktop and stack neatly on phones.</li>
+    <li>Rather than a plain text blog, Ernest's thoughts are formatted as real Instagram posts with user badge, action icons (Heart, Comment, Share), and captions.</li>
   </ul>
 
-  <h3>Section E: Student Blog Section</h3>
-  <pre><code>&lt;section class="card"&gt;
-  &lt;h2&gt;&lt;i class="fa-solid fa-book-open"&gt;&lt;/i&gt; Student Blog&lt;/h2&gt;
-  &lt;div class="blog-box"&gt;
-    &lt;h3&gt;Balancing Academics and an Active Lifestyle&lt;/h3&gt;
-    &lt;p&gt;Being an undergraduate student at Makerere University is both challenging and rewarding...&lt;/p&gt;
-    &lt;p&gt;At the same time, I make sure not to spend the whole day glued to a screen...&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
-  <p><strong>How to explain this to the lecturer:</strong></p>
-  <ul>
-    <li>Shares real student reflections on balancing academic study at Makerere with fitness routines.</li>
-  </ul>
-
-  <h3>Section F: Interactive Like Button & Comment Form</h3>
-  <pre><code>&lt;section class="card"&gt;
-  &lt;h2&gt;&lt;i class="fa-solid fa-comments"&gt;&lt;/i&gt; Leave a Message for Ernest&lt;/h2&gt;
-  
-  &lt;!-- Like Button --&gt;
-  &lt;div class="interactive-row"&gt;
-    &lt;span&gt;Support Ernest's page:&lt;/span&gt;
-    &lt;button id="like-btn" class="like-btn"&gt;
-      &lt;i class="fa-solid fa-thumbs-up"&gt;&lt;/i&gt; Like (&lt;span id="like-count"&gt;0&lt;/span&gt;)
-    &lt;/button&gt;
-  &lt;/div&gt;
-
-  &lt;!-- Comment Form --&gt;
-  &lt;form id="comment-form" class="comment-form"&gt;
-    &lt;input type="text" id="comment-author" placeholder="Your Name" required&gt;
-    &lt;textarea id="comment-message" placeholder="Write a message..." required&gt;&lt;/textarea&gt;
-    &lt;button type="submit"&gt;Post Comment&lt;/button&gt;
+  <h3>Section E: Instagram Comments Box</h3>
+  <pre><code>&lt;section class="ig-comments-card"&gt;
+  &lt;h2&gt;&lt;i class="fa-solid fa-comments"&gt;&lt;/i&gt; Leave a Comment for Ernest&lt;/h2&gt;
+  &lt;form id="comment-form" class="ig-comment-form"&gt;
+    &lt;input type="text" id="comment-author" placeholder="Add your username or name..." required&gt;
+    &lt;textarea id="comment-message" placeholder="Add a comment..." required&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Post&lt;/button&gt;
   &lt;/form&gt;
-
   &lt;div id="comments-list" class="comments-list"&gt;&lt;/div&gt;
 &lt;/section&gt;</code></pre>
   <p><strong>How to explain this to the lecturer:</strong></p>
   <ul>
-    <li>The button has <code>id="like-btn"</code> and the counter has <code>id="like-count"</code>. When clicked, JavaScript increments this number.</li>
-    <li>The form has <code>id="comment-form"</code> with required inputs for name and message. When submitted, JavaScript appends the comment into <code>#comments-list</code> without refreshing the page.</li>
+    <li>The button has <code>id="like-btn"</code> and the counter has <code>id="like-count"</code>.</li>
+    <li>When a comment is submitted, JavaScript intercepts the submit and inserts the comment into <code>#comments-list</code> without reloading the page.</li>
   </ul>
 
   <div class="page-break"></div>
 
-  <h2>3. How the CSS Works (css/ernest.css)</h2>
-
-  <h3>1. Reset and Theme Colors</h3>
-  <pre><code>* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: #0f172a;
-  color: #e2e8f0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}</code></pre>
-  <ul>
-    <li><code>box-sizing: border-box</code>: Makes sure padding and borders don't increase the total width of elements, preventing horizontal overflow.</li>
-    <li><code>#0f172a</code>: Dark slate background fitting a tech and cloud developer portfolio.</li>
-  </ul>
-
-  <h3>2. Clean, Balanced Cards</h3>
-  <pre><code>.card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}</code></pre>
-  <ul>
-    <li>Clean 1px border all around. No one-sided highlight stripes, giving it a clean, human design.</li>
-  </ul>
-
-  <h3>3. Responsive CSS Grid for Hobbies</h3>
-  <pre><code>.hobbies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}</code></pre>
-  <ul>
-    <li><code>repeat(auto-fit, minmax(180px, 1fr))</code>: Automatically fits as many 180px cards across the screen as possible, wrapping to the next line on smaller devices without needing complicated media queries!</li>
-  </ul>
-
-  <div class="page-break"></div>
-
-  <h2>4. How the JavaScript Works (js/main.js)</h2>
+  <h2>3. How the JavaScript Works (js/main.js)</h2>
   <p>The JavaScript is lightweight (under 60 lines) and uses plain vanilla JavaScript.</p>
 
   <h3>1. DOMContentLoaded Listener</h3>
@@ -376,27 +314,23 @@ likeBtn.addEventListener('click', () => {
     <li>Saves the list of comments as a JSON array in <code>localStorage</code>.</li>
   </ul>
 
-  <h2>5. Quick Answers for Your Presentation</h2>
+  <h2>4. Quick Answers for Your Presentation</h2>
   <table>
     <tr>
       <th style="width: 35%;">Possible Lecturer Question</th>
       <th>Your Direct Answer</th>
     </tr>
     <tr>
-      <td>"Why do the pages look different?"</td>
-      <td>"Each of the six group members built their own page individually to reflect their own personality and hobbies. At the end, we united all six pages into one website using a shared navigation bar."</td>
+      <td>"Why do the pages look so completely different?"</td>
+      <td>"Each member of Group 7 picked a distinct real-world UI design archetype. Ernest used an Instagram profile and feed, Daniella used a Notion digital workspace, Ibrahim used LinkedIn, Ntwari used an ESPN match-center card, Grace used a software developer portfolio, and Matthew used a chess/basketball court layout. We then united them using a shared navigation bar."</td>
     </tr>
     <tr>
       <td>"Where are your icons coming from?"</td>
-      <td>"We linked the official Font Awesome CDN via a standard <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> and used Font Awesome vector icon classes (like <code>fa-person-swimming</code>) instead of emojis."</td>
+      <td>"We linked the official Font Awesome CDN via a standard <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> and used Font Awesome vector icon classes instead of emojis."</td>
     </tr>
     <tr>
-      <td>"What makes your layout responsive?"</td>
-      <td>"We used modern CSS Grid with <code>repeat(auto-fit, minmax(180px, 1fr))</code> and Flexbox. This allows cards to automatically reposition themselves smoothly on mobile screens."</td>
-    </tr>
-    <tr>
-      <td>"How does your comment box work without a database?"</td>
-      <td>"We used the browser's built-in <code>localStorage</code> API. When someone posts a comment, JavaScript prevents page reload, creates a DOM element, and saves the message list as a JSON string."</td>
+      <td>"How does your comment box work without a backend server?"</td>
+      <td>"We used the browser's built-in <code>localStorage</code> API. When someone posts a comment, JavaScript intercepts the form submit with <code>event.preventDefault()</code>, dynamically inserts the comment into the page DOM, and stores the list in browser memory as JSON."</td>
     </tr>
   </table>
 

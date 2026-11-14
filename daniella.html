@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kagoda Daniella Evelyn &bull; Purple Space</title>
+  <title>Daniella Evelyn &bull; Workspace Wiki &bull; Group 7</title>
   <!-- Font Awesome CDN for icons instead of emojis -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/daniella.css">
@@ -11,12 +11,14 @@
 <body data-student="daniella">
 
   <!-- ======================================================================
-       1. ROUNDED TOPBAR
+       1. NOTION TOPBAR & BREADCRUMBS
        ====================================================================== -->
-  <header class="daniella-header">
-    <div class="daniella-nav-box">
-      <a href="index.html" class="daniella-logo">DANIELLA &bull; MAKERERE</a>
-      <nav class="daniella-pills">
+  <header class="notion-navbar">
+    <div class="notion-nav-inner">
+      <div class="notion-breadcrumbs">
+        <span>Group 7</span> / <span>Students</span> / <span class="current">Daniella Evelyn</span>
+      </div>
+      <nav class="notion-group-links">
         <a href="index.html">Grace</a>
         <a href="daniella.html" class="active">Daniella</a>
         <a href="ernest.html">Ernest</a>
@@ -27,95 +29,120 @@
     </div>
   </header>
 
+  <!-- Notion Cover Banner -->
+  <div class="notion-cover"></div>
+
   <!-- ======================================================================
-       2. CENTERED STUDIO CONTAINER
+       2. NOTION WORKSPACE PAGE CONTENT
        ====================================================================== -->
-  <main class="daniella-container">
+  <main class="notion-page-container">
 
-    <!-- Hero Card: Centered Student Banner -->
-    <section class="daniella-hero-card">
+    <!-- Notion Title & Page Meta -->
+    <div class="notion-title-section">
+      <div class="notion-page-icon">
+        <i class="fa-solid fa-book-bookmark"></i>
+      </div>
       <h1>Kagoda Daniella Evelyn</h1>
-      <p class="tagline">Undergraduate Student at Makerere University</p>
+      <div class="subtitle">Personal Workspace & Student Learning Log &bull; Makerere University</div>
+    </div>
 
-      <ul class="daniella-badge-cluster">
-        <li>Registration: 25/U/03765</li>
-        <li>DOB: 05 / Feb / 2006</li>
-        <li>Email: kayzdaniella@gmail.com</li>
-        <li>Favorite Color: Purple</li>
-      </ul>
-    </section>
+    <!-- Notion Properties Block -->
+    <div class="notion-properties">
+      <div class="notion-prop-row">
+        <div class="notion-prop-name"><i class="fa-solid fa-id-card"></i> Reg Number</div>
+        <div class="notion-prop-value"><span class="notion-tag-pill">25/U/03765</span></div>
+      </div>
+      <div class="notion-prop-row">
+        <div class="notion-prop-name"><i class="fa-solid fa-calendar-day"></i> Date of Birth</div>
+        <div class="notion-prop-value">05 / February / 2006</div>
+      </div>
+      <div class="notion-prop-row">
+        <div class="notion-prop-name"><i class="fa-solid fa-envelope"></i> Email</div>
+        <div class="notion-prop-value">kayzdaniella@gmail.com</div>
+      </div>
+      <div class="notion-prop-row">
+        <div class="notion-prop-name"><i class="fa-solid fa-palette"></i> Signature Color</div>
+        <div class="notion-prop-value"><span class="notion-tag-pill">Purple</span></div>
+      </div>
+    </div>
 
-    <!-- 3-Column Creative Gallery -->
+    <!-- Notion Callout Box -->
+    <div class="notion-callout">
+      <i class="fa-solid fa-circle-info"></i>
+      <div>
+        <strong>Welcome to my workspace page.</strong> Here I document what I am currently reading, my university experiences at Makerere, and thoughts on finding balance during the semester.
+      </div>
+    </div>
+
+    <!-- Notion Database / Kanban Card View -->
     <section>
-      <h2 class="daniella-section-title">
-        <i class="fa-solid fa-sparkles"></i> What Inspires Me
+      <h2 class="notion-section-header">
+        <i class="fa-solid fa-table-list"></i> Focus Areas & Personal Passions
       </h2>
 
-      <div class="daniella-gallery">
-        <div class="daniella-gallery-item">
-          <div class="daniella-item-icon">
-            <i class="fa-solid fa-book-bookmark"></i>
+      <div class="notion-board-grid">
+        <div class="notion-card">
+          <div class="notion-card-status">
+            <i class="fa-solid fa-book-open"></i> Daily Passion
           </div>
           <h3>Reading Novels</h3>
-          <p>I love losing myself in captivating stories, great characters, and exploring creative fiction whenever I have free time.</p>
+          <p>Exploring captivating fiction, psychological thrillers, and rich narratives that spark imagination during quiet study breaks.</p>
         </div>
 
-        <div class="daniella-gallery-item">
-          <div class="daniella-item-icon">
-            <i class="fa-solid fa-heart"></i>
+        <div class="notion-card">
+          <div class="notion-card-status">
+            <i class="fa-solid fa-palette"></i> Aesthetic Choice
           </div>
           <h3>The Color Purple</h3>
-          <p>Purple is my signature favorite shade. It brings a calm, positive, and imaginative feeling to my study desk and books.</p>
+          <p>Purple is my signature favorite shade. It brings a calm, creative, and welcoming feeling to my desk, notebooks, and digital workspace.</p>
         </div>
 
-        <div class="daniella-gallery-item">
-          <div class="daniella-item-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
+        <div class="notion-card">
+          <div class="notion-card-status">
+            <i class="fa-solid fa-graduation-cap"></i> Academic Growth
           </div>
-          <h3>Campus Learning</h3>
-          <p>Attending lectures, taking organized notes, and collaborating with my fellow Group 7 teammates at Makerere University.</p>
+          <h3>Campus Academics</h3>
+          <p>Attending regular lectures, keeping organized study summaries, and collaborating closely with our Group 7 team members.</p>
         </div>
       </div>
     </section>
 
-    <!-- Campus Diary / Student Reflections -->
-    <section class="daniella-diary">
-      <div class="daniella-diary-header">Makerere Student Reflections</div>
-      <h3>Finding Calm and Balance on Campus</h3>
+    <!-- Notion Document Body -->
+    <section class="notion-body-text">
+      <h2 class="notion-section-header">
+        <i class="fa-solid fa-file-lines"></i> Semester Reflections: Finding Calm in the Routine
+      </h2>
       <p>
-        University life can move at high speed between lecture timetables, coursework deliverables, and group discussions. Whenever I need a moment to reset, finding a quiet corner and cracking open a great novel is my favorite escape.
+        Undergraduate life at Makerere University moves with steady momentum. Between lecture timetables, project milestones, and group revisions, it is easy for weeks to pass in a blur.
       </p>
       <p>
-        Surrounding myself with my favorite shade of purple makes my study space feel welcoming and peaceful. Collaborating with my group members on this website has been a wonderful experience for all of us this semester!
+        To keep a balanced routine, I rely on quiet moments with a good book. Diving into a novel offers an escape from screen fatigue and refreshes my creativity. Teaming up with my group members on this website has shown how much we can achieve through collaboration.
       </p>
     </section>
 
-    <!-- Interactive Purple Wall -->
-    <section class="daniella-wall">
-      <h2 class="daniella-section-title">
-        <i class="fa-solid fa-comments"></i> Leave a Friendly Note
-      </h2>
-
-      <div class="daniella-cheer-bar">
-        <span>Send some support to Daniella:</span>
-        <button id="like-btn" class="daniella-cheer-btn">
+    <!-- Notion Discussion & Comments Drawer -->
+    <section class="notion-discuss-box">
+      <div class="notion-like-bar">
+        <span>Applaud or support Daniella's workspace page:</span>
+        <button id="like-btn" class="notion-like-btn">
           <i class="fa-solid fa-thumbs-up"></i> Like Page (<span id="like-count">0</span>)
         </button>
       </div>
 
-      <form id="comment-form" class="daniella-form">
+      <h3 style="font-size: 1rem; color: #37352f; margin-bottom: 0.75rem;">Page Discussion & Comments</h3>
+      <form id="comment-form" class="notion-comment-form">
         <input type="text" id="comment-author" placeholder="Your Name" required>
-        <textarea id="comment-message" placeholder="Write a cheerful note or message..." required></textarea>
-        <button type="submit">Post to Wall</button>
+        <textarea id="comment-message" placeholder="Add a comment or mention..." required></textarea>
+        <button type="submit">Submit Comment</button>
       </form>
 
       <div id="comments-list" class="comments-list"></div>
     </section>
 
-    <!-- Bottom Navigation Pager -->
-    <div class="daniella-pager">
-      <a href="index.html" class="daniella-pager-btn">&larr; Previous: Grace</a>
-      <a href="ernest.html" class="daniella-pager-btn">Next: Ernest &rarr;</a>
+    <!-- Pager Navigation -->
+    <div class="notion-pager">
+      <a href="index.html">&larr; Previous: Grace</a>
+      <a href="ernest.html">Next: Ernest &rarr;</a>
     </div>
 
     <footer>
