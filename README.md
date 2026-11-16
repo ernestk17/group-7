@@ -4,14 +4,14 @@ A multi-page group website built by students of Makerere University. Each studen
 
 ## Group Members & Webpages
 
-| # | Member | Webpage | Style Concept | Focus Area |
-|---|---|---|---|---|
-| 01 | **Nantume Bakhita Grace** | [`index.html`](index.html) | Literary Journal | Software Engineering & Novels |
-| 02 | **Kagoda Daniella Evelyn** | [`daniella.html`](daniella.html) | Purple Aesthetic Page | Campus Life & Reading |
-| 03 | **Kayondo Ernest** | [`ernest.html`](ernest.html) | Dark Tech Portfolio | DevOps Engineering, Fitness & Gaming |
-| 04 | **Ntwari Joseph David** | [`ntwari.html`](ntwari.html) | Sports Green Page | Football & Campus Life |
-| 05 | **Lubega Ibrahim** | [`ibrahim.html`](ibrahim.html) | Classic Editorial Page | Golf, Football & Academics |
-| 06 | **Musiinguzi Matthew Jekyns** | [`matthew.html`](matthew.html) | High-Contrast Dark Page | Chess Strategy, Basketball & Gaming |
+| # | Member | Student ID / Reg No | Webpage | Style Concept | Focus Area |
+|---|---|---|---|---|---|
+| 01 | **Nantume Bakhita Grace** | `25/U/04011/EVE` | [`index.html`](index.html) | Literary Journal | Software Engineering & Novels |
+| 02 | **Kagoda Daniella Evelyn** | `25/U/03765/PS` | [`daniella.html`](daniella.html) | Purple Aesthetic Page | Campus Life & Reading |
+| 03 | **Kayondo Ernest** | `2500703793` | [`ernest.html`](ernest.html) | Dark Tech Portfolio | DevOps Engineering, Fitness & Gaming |
+| 04 | **Ntwari David Joseph** | `2500704042` | [`ntwari.html`](ntwari.html) | Sports Green Page | Football & Campus Life |
+| 05 | **Lubega Ibrahim Mulungi** | `2500703852` | [`ibrahim.html`](ibrahim.html) | Classic Editorial Page | Golf, Football & Academics |
+| 06 | **Musinguzi Mathew Jekyns** | `25/U/03918/PS` | [`matthew.html`](matthew.html) | High-Contrast Dark Page | Chess Strategy, Basketball & Gaming |
 
 ## Project Architecture
 
