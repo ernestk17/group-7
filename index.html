@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nantume Bakhita Grace &bull; BIST Student</title>
+  <!-- Font Awesome CDN for icons instead of emojis -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/bakhita.css">
+</head>
+<body data-student="bakhita">
+
+  <!-- ======================================================================
+       1. MINIMALIST TOPBAR
+       ====================================================================== -->
+  <header class="grace-navbar">
+    <div class="grace-nav-inner">
+      <a href="index.html" class="grace-brand">GRACE<span>.DEV</span> // Makerere</a>
+      <nav class="grace-nav-links">
+        <a href="index.html" class="active">Grace</a>
+        <a href="daniella.html">Daniella</a>
+        <a href="ernest.html">Ernest</a>
+        <a href="ntwari.html">Joseph</a>
+        <a href="ibrahim.html">Ibrahim</a>
+        <a href="mathew.html">Mathew</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       2. ASYMMETRICAL 2-COLUMN PORTFOLIO LAYOUT
+       ====================================================================== -->
+  <div class="grace-layout">
+
+    <!-- Left Column: Sticky Profile Card & Quick Info -->
+    <aside class="grace-sidebar">
+      <div class="grace-sidebar-card">
+        <div class="grace-initials-badge">NG</div>
+        <h1>Nantume Bakhita Grace</h1>
+        <div class="grace-title-tag">Aspiring Cyber security analyst</div>
+
+        <table class="grace-meta-table">
+          <tr>
+            <td class="label">Reg No</td>
+            <td class="value">25/U/04011/EVE</td>
+          </tr>
+          <tr>
+            <td class="label">Age</td>
+            <td class="value">21 Years Old</td>
+          </tr>
+          <tr>
+            <td class="label">Campus</td>
+            <td class="value">Makerere University</td>
+          </tr>
+          <tr>
+            <td class="label">Student Number</td>
+            <td class="value">2500704011</td>
+          </tr>
+          <tr>
+            <td class="label">Group Number</td>
+            <td class="value">7</td>
+          </tr>
+        </table>
+
+        <!-- Interactive Like Panel -->
+        <div class="grace-like-panel">
+          <p>Support Grace's Portfolio</p>
+          <button id="like-btn" class="grace-like-btn">
+            <i class="fa-solid fa-heart"></i> Like (<span id="like-count">0</span>)
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Main Content Stream -->
+    <main class="grace-main">
+
+      <!-- Panel 1: Welcome & Overview -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-user"></i> About Me
+        </h2>
+        <p class="grace-hero-intro">
+          Hello! I am <strong>Nantume Bakhita Grace</strong>, a 21-year-old student at Makerere University. I am deeply interested in software engineering, cyber security, and understanding how technology can solve everyday challenges. When I am not studying, I enjoy simple grounding habits that keep life balanced.
+        </p>
+      </section>
+
+      <!-- Panel 2: Hobbies & Downtime (Horizontal Modern Rows) -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-shapes"></i> Free Time & Interests
+        </h2>
+        <div class="grace-hobbies-list">
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Reading Novels</h3>
+              <p>Exploring captivating fiction and thought-provoking literature during quiet moments.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Watching Movies</h3>
+              <p>Relaxing with compelling films on weekends when academic coursework winds down.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-tv"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Watching Series</h3>
+              <p>Following engaging episodic dramas and exciting storylines in the evenings.</p>
+            </div>
+          </div>
+
+          <div class="grace-hobby-row">
+            <div class="grace-hobby-icon">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="grace-hobby-content">
+              <h3>Rest & Sleep</h3>
+              <p>Prioritizing peaceful, restorative sleep to keep my mind sharp for morning lectures.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Panel 3: Journal / Campus Reflections -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-newspaper"></i> Campus Reflections
+        </h2>
+        <article class="grace-article">
+          <div class="grace-article-meta">
+            <span class="category">Makerere University</span>
+            <span>&bull;</span>
+            <span>Student Life</span>
+          </div>
+          <h3>Balancing Code, Lecture Halls, and Solitude</h3>
+          <p>
+            Being an IT student at Makerere requires consistent practice, discipline, and attention to detail. Every week brings new algorithms, project discussions, and deadlines that challenge our problem-solving skills.
+          </p>
+          <p>
+            Finding healthy downtime is what makes the journey sustainable. 
+          </p>
+        </article>
+      </section>
+
+      <!-- Panel 4: Interactive Comment Box -->
+      <section class="grace-panel">
+        <h2 class="grace-panel-heading">
+          <i class="fa-solid fa-comment-dots"></i> Leave a Friendly Note
+        </h2>
+        <form id="comment-form" class="grace-comment-form">
+          <input type="text" id="comment-author" placeholder="Your Name" required>
+          <textarea id="comment-message" placeholder="Leave a message or feedback for Grace..." required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+
+        <div id="comments-list" class="comments-list"></div>
+      </section>
+
+      <!-- Navigation to other group members -->
+      <div class="grace-footer-nav">
+        <a href="mathew.html" class="grace-footer-btn">&larr; Previous: Mathew</a>
+        <a href="daniella.html" class="grace-footer-btn">Next: Daniella &rarr;</a>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Group 7 &bull; Makerere University</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
