@@ -11,7 +11,7 @@ A multi-page group website built by students of Makerere University. Each studen
 | 03 | **Kayondo Ernest** | `2500703793` | [`ernest.html`](ernest.html) | Dark Tech Portfolio | DevOps Engineering, Fitness & Gaming |
 | 04 | **Ntwari David Joseph** | `2500704042` | [`ntwari.html`](ntwari.html) | Sports Green Page | Football & Campus Life |
 | 05 | **Lubega Ibrahim Mulungi** | `2500703852` | [`ibrahim.html`](ibrahim.html) | Classic Editorial Page | Golf, Football & Academics |
-| 06 | **Musinguzi Mathew Jekyns** | `25/U/03918/PS` | [`matthew.html`](matthew.html) | High-Contrast Dark Page | Chess Strategy, Basketball & Gaming |
+| 06 | **Musinguzi Mathew Jekyns** | `25/U/03918/PS` | [`mathew.html`](mathew.html) | High-Contrast Dark Page | Chess Strategy, Basketball & Gaming |
 
 ## Project Architecture
 

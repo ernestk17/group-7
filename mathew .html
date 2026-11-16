@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musinguzi Mathew Jekyns</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap">
+<style>
+/* Layout follows ZeroFour: dark header bar and banner, white feature bands (hobbies, two columns, 8/4 split), dark footer. Slate palette kept, the template's blue accent swapped for green. */
+:root {
+  --slate: #303238;
+  --slate-bar: #3b3e45;
+  --slate-alt: #464a52;
+  --white: #ffffff;
+  --text: #6b717c;
+  --heading: #404248;
+  --meta: #696969;
+  --rule: #dbdbdb;
+  --field: #d3d6db;
+  --green: #3f9d63;
+  --green-hover: #50b074;
+  --green-active: #308450;
+  --footer-link: #acb2bf;
+  --font: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--slate); }
+body {
+  margin: 0; padding: 0; background: var(--slate); color: var(--text);
+  font-family: var(--font); font-size: 15px; line-height: 1.85;
+  -webkit-text-size-adjust: none;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--green-hover); outline-offset: 2px; }
+h1, h2, h3 { text-transform: uppercase; font-weight: 800; letter-spacing: 0.04em; color: var(--heading); margin: 0 0 1em; }
+h2 { font-size: 2em; line-height: 1.1; margin-bottom: 1em; text-wrap: balance; }
+h3 { font-size: 1.35em; line-height: 1.25; }
+p { margin: 0 0 1.5em; }
+strong { color: var(--heading); font-weight: 700; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+.in {
+  max-width: 1200px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Buttons */
+.button, button.button {
+  font: inherit; font-weight: 800; font-size: 0.95em; letter-spacing: 0.075em; text-transform: uppercase; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em; cursor: pointer; border: 0; outline-offset: 2px;
+  background-color: var(--green);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.35), inset 0 2px 1px 0 rgba(255,255,255,0.35);
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
+  color: #fff; border-radius: 8px; padding: 1em 2em; line-height: 1.3; transition: background-color 0.2s ease-in-out;
+}
+.button:hover { background-color: var(--green-hover); }
+.button:active, .button[aria-pressed="true"] { background-color: var(--green-active); }
+.button.alt { background-color: var(--slate-alt); }
+.button.alt:hover { background-color: #565a62; }
+.button.alt:active { background-color: #363a42; }
+.button.large { font-size: 1.25em; padding: 1em 2.25em; }
+.button svg { width: 1.2em; height: 1.2em; opacity: 0.6; flex: none; }
+
+/* Header bar and banner */
+#header-wrapper { background: linear-gradient(135deg, #25282d 0%, #343a40 55%, #2d3a33 100%); padding: 3em 0; }
+#header { border-radius: 10px; background: rgba(255,255,255,0.1); padding: 0.75em; }
+#header .bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5em 2em;
+  min-height: 5.5em; padding: 0.6em 1.75em; border-radius: 8px; background-color: rgba(59,62,69,0.92);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.35));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.45), inset 0 2px 1px 0 rgba(255,255,255,0.15);
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
+}
+#header .logo { font-size: 1.5em; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; text-decoration: none; }
+#nav { display: flex; flex-wrap: wrap; gap: 0.2em 0.4em; }
+#nav a {
+  color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 800; font-size: 0.85em;
+  letter-spacing: 0.075em; padding: 0.55em 0.9em; border-radius: 6px;
+}
+#nav a:hover { background: rgba(255,255,255,0.08); }
+#nav a[aria-current="page"] { background: rgba(0,0,0,0.15); box-shadow: inset 1px 1px 0 0 rgba(0,0,0,0.025), 1px 1px 0 0 rgba(255,255,255,0.025); }
+
+#banner { text-align: center; max-width: 940px; margin: 0 auto; padding: 7em 0 4em; }
+#banner h1 {
+  border: solid 1px rgba(255,255,255,0.25); border-left: 0; border-right: 0; color: rgba(255,255,255,0.8);
+  font-size: 2.35em; font-weight: 700; line-height: 1.3; margin: 0 0 1.5em; text-wrap: balance;
+}
+#banner h1::before { content: ""; display: block; border-top: solid 1px rgba(255,255,255,0.25); margin: 10px 0 1.25em; }
+#banner h1::after { content: ""; display: block; border-bottom: solid 1px rgba(255,255,255,0.25); margin: 1.25em 0 10px; }
+.banner-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5em 2.5em; }
+#banner p {
+  margin: 0; flex: 1 1 320px; text-align: right; text-transform: uppercase; font-weight: 700; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.8); font-size: 1.4em; line-height: 1.5;
+}
+.banner-row .button { flex: none; }
+
+/* Wrappers */
+#main-wrapper { background: var(--white); }
+.wrapper { padding: 7em 0; }
+.style1 { background: linear-gradient(to bottom, #e9e9e9, rgba(255,255,255,0) 12em), linear-gradient(to top, #e9e9e9, rgba(255,255,255,0) 12em), var(--white); }
+.style2 { background: var(--white); }
+.style3 { background: linear-gradient(to bottom, #e9e9e9, rgba(255,255,255,0) 12em), var(--white); }
+
+.cols { display: grid; gap: 50px; align-items: start; }
+.cols > * { min-width: 0; }
+.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cols-84 { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+
+/* Feature 1: hobbies */
+.feature1 { text-align: center; }
+.feature1 > header { margin-bottom: 3.5em; }
+.feature1 > header h2 { font-size: 2.5em; margin-bottom: 0.25em; }
+.feature1 > header p { text-transform: uppercase; font-weight: 700; letter-spacing: 0.065em; color: var(--meta); font-size: 1.1em; margin: 0; }
+.hobby svg { width: 56px; height: 56px; color: var(--green); margin-bottom: 14px; }
+.hobby h3 { margin: 0 0 0.5em; font-size: 1.2em; }
+.hobby p { margin: 0 auto; max-width: 28ch; }
+
+/* Major headers */
+header.major { border-bottom: solid 1px var(--rule); margin: 0 0 2.5em; }
+header.major::after { content: ""; display: block; border-top: solid 1px var(--rule); height: 8px; }
+header.major h2 { margin: 0 0 0.9em; font-size: 1.6em; }
+
+/* Feature 2 */
+dl.facts { margin: 0; }
+dl.facts div { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 0.25em 1em; padding: 0.6em 0; border-top: solid 1px #eee; }
+dl.facts div:first-child { border-top: 0; padding-top: 0; }
+dl.facts dt { text-transform: uppercase; font-weight: 700; letter-spacing: 0.065em; font-size: 0.85em; color: var(--meta); }
+dl.facts dd { margin: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; color: var(--heading); font-weight: 700; }
+.blog h3 { margin-top: 0; font-size: 1.15em; }
+.blog p:last-child { margin-bottom: 0; }
+
+/* Style 3 */
+#guestbook h2, .spotlight h2 { display: flex; align-items: center; gap: 0.5em; font-size: 1.6em; }
+#guestbook h2 svg, .spotlight h2 svg { width: 0.9em; height: 0.9em; opacity: 0.3; flex: none; }
+.form { display: grid; gap: 1.1em; margin-bottom: 3em; }
+.form label { display: block; text-transform: uppercase; font-weight: 800; letter-spacing: 0.04em; color: var(--heading); font-size: 0.8em; margin: 0 0 0.6em; }
+.form input, .form textarea {
+  display: block; width: 100%; font: inherit; color: var(--heading); background: #fff; border: solid 1px var(--field);
+  border-radius: 8px; padding: 0 1em; line-height: 3em; -webkit-appearance: none; appearance: none;
+}
+.form textarea { min-height: 9em; padding: 1em; line-height: 1.6; resize: vertical; }
+.form input:focus, .form textarea:focus { outline: 0; box-shadow: 0 0 2px 1px var(--green); border-color: var(--green); }
+.form .button { justify-self: start; }
+
+.msgs article { border-bottom: solid 1px var(--rule); margin: 0 0 1.75em; padding: 0 0 1.75em; }
+.msgs article:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.msgs h3 { margin: 0 0 0.4em; font-size: 1.05em; }
+.msgs p { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+.empty { margin: 0; color: var(--meta); }
+
+.spotlight .like-note { margin-bottom: 1.5em; }
+.spotlight .stack { display: grid; gap: 1em; justify-items: start; margin-bottom: 3em; }
+.spotlight .stack .button { width: 100%; }
+.spotlight .stack:last-child { margin-bottom: 0; }
+
+/* Footer */
+#footer-wrapper {
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), var(--slate);
+  padding: 6em 0 0; text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
+}
+#footer h2 { color: #fff; font-size: 1.25em; }
+#footer strong { color: #fff; }
+#footer a { color: var(--footer-link); }
+.fcols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 50px; }
+.fcols > * { min-width: 0; }
+.fcols ul li { border-top: solid 1px rgba(255,255,255,0.075); padding: 0.5em 0 0; margin: 0.5em 0 0; }
+.fcols ul li:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.fcols ul a { text-decoration: none; }
+.fcols ul a:hover { color: #fff; }
+#copyright { border-top: solid 1px rgba(255,255,255,0.075); text-align: center; margin-top: 4em; padding: 3em 0 4em; }
+
+@media (max-width: 1100px) {
+  .cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 980px) {
+  .wrapper { padding: 4.5em 0; }
+  .cols-2, .cols-84, .fcols { grid-template-columns: minmax(0, 1fr); gap: 3em; }
+  #banner { padding: 4em 0 2em; }
+  #banner h1 { font-size: 2em; }
+  #banner p { text-align: center; flex-basis: 100%; }
+}
+@media (max-width: 736px) {
+  body { font-size: 14px; }
+  .wrapper { padding: 3em 0; }
+  #header-wrapper { padding: 1.5em 0; }
+  #header .bar { padding: 0.9em 1em; justify-content: center; text-align: center; }
+  #nav { justify-content: center; }
+  #banner h1 { font-size: 1.45em; }
+  #banner p { font-size: 1.1em; }
+  h2, .feature1 > header h2 { font-size: 1.5em; }
+  .cols-4 { grid-template-columns: minmax(0, 1fr); gap: 2.5em; }
+  dl.facts div { grid-template-columns: minmax(0, 1fr); }
+  .button.large { width: 100%; font-size: 1.1em; }
+  #footer-wrapper { padding-top: 3em; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div id="page-wrapper">
+
+  <div id="header-wrapper">
+    <div class="in">
+      <header id="header">
+        <div class="bar">
+          <a href="index.html" class="logo">Group 7</a>
+          <nav id="nav" aria-label="Group 7 members">
+            <a href="index.html">Bakhita</a>
+            <a href="daniella.html">Daniella</a>
+            <a href="ernest.html">Ernest</a>
+            <a href="ntwari.html">Joseph</a>
+            <a href="ibrahim.html">Ibrahim</a>
+            <a href="mathew.html" aria-current="page">Mathew</a>
+          </nav>
+        </div>
+      </header>
+
+      <div id="banner">
+        <h1>Musinguzi Mathew Jekyns</h1>
+        <div class="banner-row">
+          <p>Undergraduate Student at Makerere University</p>
+          <a href="#guestbook" class="button large">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.2A8 8 0 1 1 21 12z"/></svg>
+            Leave a message
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-wrapper">
+
+    <div class="wrapper style1">
+      <div class="in">
+        <section class="feature1" aria-labelledby="h-hobbies">
+          <header>
+            <h2 id="h-hobbies">My Hobbies &amp; Interests</h2>
+            <p>Courts, boards, screens</p>
+          </header>
+          <div class="cols cols-4">
+            <div class="hobby">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.6 5.6c3 3 3 9.8 0 12.8M18.4 5.6c-3 3-3 9.8 0 12.8"/></svg>
+              <h3>Playing Basketball</h3>
+              <p>I enjoy hooping and playing pickup basketball matches, both comettive and charity ones.</p>
+            </div>
+            <div class="hobby">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3"/><path d="M8 21h8M9.5 21l1-8h3l1 8M9.5 13h5"/></svg>
+              <h3>Playing Chess</h3>
+              <p>I love the complexity in  tactical chess games that challenge strategy, planning, and patient problem solving. Henceforth pushing to learn it.</p>
+            </div>
+            <div class="hobby">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 12.5h4M9 10.5v4"/><circle cx="16" cy="11.5" r="0.8"/><circle cx="18" cy="13.5" r="0.8"/></svg>
+              <h3>Gaming</h3>
+              <p>Playing video games like F1, Call Of Duty in the night helps me unwind, test my reflexes, and have fun with friends and strangers.</p>
+            </div>
+            <div class="hobby">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 22h8M9 3l3 4 3-4"/></svg>
+              <h3>Watching Series</h3>
+              <p>Following engaging series episodes during evening study breaks is one of my favorite stress relieving activities.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="wrapper style2">
+      <div class="in">
+        <div class="cols cols-2">
+          <section aria-labelledby="h-profile">
+            <header class="major"><h2 id="h-profile">About Mathew</h2></header>
+            <dl class="facts">
+              <div><dt>Student ID</dt><dd>2500703918</dd></div>
+              <div><dt>Date of birth</dt><dd>01 / 05 / 2005</dd></div>
+              <div><dt>Institution</dt><dd>Makerere University</dd></div>
+              <div><dt>Role</dt><dd>Group 7 Member</dd></div>
+            </dl>
+          </section>
+          <section class="blog" aria-labelledby="h-blog">
+            <header class="major"><h2 id="h-blog">Student Blog</h2></header>
+            <article>
+              <h3>Strategy on the board and energy on the basketball court</h3>
+              <p>At Makerere University, everyday student life brings a mix of lectures, group coursework, and study sessions. To keep things interesting, I like to balance mental challenges and physical energy.</p>
+              <p>Learning chess is a way to exercise deep thinking, patience, and strategy. When I want to release study tension, I hit the basketball court with friends. Later on, gaming and catching up on a series episode gives me a simple routine that makes university life enjoyable.</p>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper style3">
+      <div class="in">
+        <div class="cols cols-84">
+          <section id="guestbook" aria-labelledby="h-msg">
+            <h2 id="h-msg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.2A8 8 0 1 1 21 12z"/></svg>
+              Leave a Message for Matthew
+            </h2>
+            <form class="form" id="comment-form">
+              <div>
+                <label for="comment-author">Your name</label>
+                <input type="text" id="comment-author" placeholder="Your name" required maxlength="60">
+              </div>
+              <div>
+                <label for="comment-message">Message</label>
+                <textarea id="comment-message" placeholder="Write a message or feedback here..." required maxlength="500"></textarea>
+              </div>
+              <button type="submit" class="button">Post comment</button>
+            </form>
+            <div class="msgs" id="comments-list" aria-live="polite"></div>
+          </section>
+
+          <aside class="spotlight">
+            <h2>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10v11H3V10zM7 10l4-8c1.7 0 3 1.3 3 3v4h6a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.6 21H7"/></svg>
+              Support
+            </h2>
+            <div class="stack">
+              <p class="like-note">Support Matthew's page:</p>
+              <button type="button" class="button" id="like-btn" aria-pressed="false">Like (<span id="like-count">0</span>)</button>
+            </div>
+            <div class="stack">
+              <a class="button alt" href="ibrahim.html">&larr; Previous: Ibrahim</a>
+              <a class="button alt" href="index.html">Next: Bakhita &rarr;</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-wrapper">
+    <footer id="footer" class="in">
+      <div class="fcols">
+        <section>
+          <h2>Group 7</h2>
+          <ul>
+            <li><a href="index.html">Bakhita</a></li>
+            <li><a href="daniella.html">Daniella</a></li>
+            <li><a href="ernest.html">Ernest</a></li>
+            <li><a href="ntwari.html">Joseph</a></li>
+            <li><a href="ibrahim.html">Ibrahim</a></li>
+            <li><a href="mathew.html">Mathew</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Keep browsing</h2>
+          <ul>
+            <li><a href="ibrahim.html">&larr; Previous: Ibrahim</a></li>
+            <li><a href="index.html">Next: Bakhita &rarr;</a></li>
+            <li><a href="#guestbook">Leave a message</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2><strong>Makerere</strong> University</h2>
+          <p>Student pages for Group 7, Makerere University. Each member has a profile with hobbies, a short blog and a guestbook.</p>
+        </section>
+      </div>
+      <div id="copyright">&copy; 2026 Group 7 &middot; Makerere University</div>
+    </footer>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  var liked = store.get('mathew-liked', false);
+  var count = store.get('mathew-likes', 0);
+  var btn = document.getElementById('like-btn');
+  var countEl = document.getElementById('like-count');
+  function paintLike() { countEl.textContent = count; btn.setAttribute('aria-pressed', liked ? 'true' : 'false'); }
+  btn.addEventListener('click', function () {
+    liked = !liked; count += liked ? 1 : -1; if (count < 0) count = 0;
+    store.set('mathew-liked', liked); store.set('mathew-likes', count); paintLike();
+  });
+  paintLike();
+
+  var list = document.getElementById('comments-list');
+  var comments = store.get('mathew-comments', []);
+  function paintComments() {
+    list.textContent = '';
+    if (!comments.length) {
+      var p = document.createElement('p'); p.className = 'empty';
+      p.textContent = 'No messages yet. Write the first one above.'; list.appendChild(p); return;
+    }
+    comments.slice().reverse().forEach(function (c) {
+      var a = document.createElement('article');
+      var h = document.createElement('h3'); h.textContent = c.author;
+      var m = document.createElement('p'); m.textContent = c.message;
+      a.appendChild(h); a.appendChild(m); list.appendChild(a);
+    });
+  }
+  document.getElementById('comment-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var a = document.getElementById('comment-author'), m = document.getElementById('comment-message');
+    var author = a.value.trim(), message = m.value.trim();
+    if (!author || !message) return;
+    comments.push({ author: author, message: message });
+    store.set('mathew-comments', comments);
+    a.value = ''; m.value = ''; paintComments();
+  });
+  paintComments();
+})();
+</script>
+</body>
+</html>
